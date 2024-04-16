@@ -5,54 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d428e33-5d9f-43ff-af20-aa3e33a026c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/nurdinHakaton.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/mongo/mongo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/NavigateRouter/NavigateRouter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/middleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/storeSchema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/ui/StoreProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/router/config/RouterConfig.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/providers/router/ui/AppRouter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/styles/reset.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/util/AuthUtil/AuthUtil.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/util/LoginUtil/LoginUtil.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Form/model/reducer/FormReducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Form/model/selectors/FormSelectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Form/model/types/FormTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AuthPage/ui/AuthPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/GamePage/ui/GamePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/LoginPage/ui/LoginPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/MainPage/ui/MainPage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/MainPage/ui/MainPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ProfilePage/ui/ProfilePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/api/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/hooks/useAppDispatch/useAppDispatch.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/FormDetails/ui/FormDetails.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/FormDetails/ui/FormDetails.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/Header/DontHeader/DontHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/Header/UserHeader/ui/CustomHeader.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/Header/UserHeader/ui/CustomHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/LoginDetails/LoginDetails.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/LoginDetails/LoginDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/untitled2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/providers/NavigateRouter/NavigateRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/NavigateRouter/NavigateRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/providers/router/config/RouterConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/router/config/RouterConfig.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/util/LoginUtil/LoginUtil.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/util/LoginUtil/LoginUtil.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Header/ui/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/ui/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Header/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/ui/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/GamePage/ui/GamePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/GamePage/ui/GamePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="cf11fa22dd0fd97905fbbd4ec481493936f59198" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -85,24 +50,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.server.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/nurdinHakaton&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\user\\Desktop\\nurdinHakaton\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.server.js.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "cf11fa22",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/user/Desktop/nurdinHakaton",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\user\\Desktop\\nurdinHakaton\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\nurdinHakaton\src\features\LoginFeatures" />
@@ -121,7 +86,7 @@
       <workItem from="1713086747181" duration="6464000" />
       <workItem from="1713093750984" duration="5190000" />
       <workItem from="1713256933452" duration="6407000" />
-      <workItem from="1713263536979" duration="7126000" />
+      <workItem from="1713263536979" duration="10765000" />
     </task>
     <servers />
   </component>

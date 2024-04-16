@@ -38,7 +38,8 @@ export const LoginUtil = async (
         });
 
         if (res.data.message === "exist") {
-            navigate("/game", { state: { id: email, password: password } });
+            console.log("Вы в game");
+            return navigate("/game", { state: { id: email, password: password } });
         } else if (res.data.message === "notexist") {
             setEmailError("Вы не зарегистрированы");
         }

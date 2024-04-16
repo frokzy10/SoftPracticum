@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Navigate, Route, Routes } from "react-router-dom";
 import LoginPage from "../../../pages/LoginPage/ui/LoginPage";
-import GamePage from "../../../pages/GamePage/ui/GamePage";
+
 import ProfilePage from "../../../pages/ProfilePage/ui/ProfilePage";
+import GamePage from "../../../pages/GamePage/ui/GamePage";
+
 
 
 export const ProtectedRoute = ({ isLoggedIn, children }: { isLoggedIn: boolean, children: React.ReactNode }) => {
@@ -14,18 +16,13 @@ const Router = () => {
 
     return (
         <Routes>
-            <Route path="/log_in" element={<LoginPage />} />
-            <Route
-                path="/game"
-                element={<ProtectedRoute isLoggedIn={isLoggedIn}><GamePage /></ProtectedRoute>}
+            <Route path="/log_in" element={<LoginPage/>}/>
+            <Route path="/game"
+                element={<ProtectedRoute isLoggedIn={isLoggedIn}><GamePage/></ProtectedRoute> }
             />
             <Route
                 path="/game/profile"
                 element={<ProtectedRoute isLoggedIn={isLoggedIn}><ProfilePage /></ProtectedRoute>}
-            />
-            <Route
-                path="/game"
-                element={isLoggedIn ? <Navigate to="/game" /> : <Navigate to="/log_in" />}
             />
         </Routes>
     );

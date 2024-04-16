@@ -12,7 +12,6 @@ export enum AppRoutes {
     MAIN = "main",
     AUTH = "auth",
     LOG_IN = "login",
-    GAME = "game",
     PROFILE = "profile"
 }
 
@@ -22,7 +21,6 @@ export const RoutePaths: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: "/",
     [AppRoutes.AUTH]: "/auth",
     [AppRoutes.LOG_IN]: "/log_in",
-    [AppRoutes.GAME]: "/game",
     [AppRoutes.PROFILE]:"/game/profile"
 }
 
@@ -40,10 +38,6 @@ export const routerConfig: Record<AppRoutes, AppRouteProps> = {
     [AppRoutes.LOG_IN]:{
         path:RoutePaths.login,
         element: <LoginPage/>
-    },
-    [AppRoutes.GAME]:{
-        path:RoutePaths.game,
-        element: <GamePage/>
     },
     [AppRoutes.PROFILE]:{
         path:RoutePaths.profile,

@@ -1,7 +1,7 @@
-import React  from 'react';
+import React, {useEffect} from 'react';
 import Header from "../widgets/Header/ui/Header";
 import AppRouter from "./providers/router/ui/AppRouter";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import DontHeader from "../widgets/Header/DontHeader/DontHeader";
 import CustomHeader from "../widgets/Header/UserHeader/ui/CustomHeader";
 import Router from "./providers/NavigateRouter/NavigateRouter";
@@ -15,19 +15,7 @@ function App() {
             <DontHeader/>
         )
     }
-
-    if (location.pathname === "/game") {
-        return (
-            <main className="App">
-                <div className="AppContainer">
-                    <CustomHeader/>
-                    <div className="content">
-                        <AppRouter/>
-                    </div>
-                </div>
-            </main>
-        )
-    }
+    
     return (
         <>
             <Router/>
