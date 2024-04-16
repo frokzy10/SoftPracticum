@@ -1,0 +1,103 @@
+form {
+  background-color: #1b2052;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 45px;
+  border-radius: 9px;
+
+
+  .AuthTitle {
+    font-family: "Open sans", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 27px;
+    text-align: center;
+  }
+
+  .AuthSubtitle {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #dddddd;
+    width: 350px;
+    text-align: center;
+    margin-bottom: 7%;
+  }
+
+  .InputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    .AuthError{
+      color: red;
+      font-family: "Open sans",sans-serif;
+    }
+
+    .AuthInput {
+      border-radius: 8px;
+      border: 0.1px solid rgba(204, 204, 204, 0.68);
+      height: 35px;
+      padding: 0 10px;
+      outline: none;
+      font-family: Roboto, sans-serif;
+      background-color: transparent;
+      transition: all 400ms;
+      color: #dddddd;
+
+      &::placeholder {
+        color: #ddd;
+      }
+
+      &:focus {
+        border:1px solid #001dff;
+
+        &::placeholder {
+          color: #ddd;
+        }
+      }
+    }
+  }
+
+  .AuthButton {
+    height: 35px;
+    border-radius: 7px;
+    border: none;
+    background-color: #ff8000;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    transition: all 400ms;
+
+    &:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
+  }
+
+  .account {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: center;
+
+    h2 {
+      font-family: "Nunito", sans-serif;
+      font-weight: 500;
+      color: #ffffff;
+      font-size: 17px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+
+      a {
+        font-family: Roboto, sans-serif;
+
+      }
+    }
+  }
+}

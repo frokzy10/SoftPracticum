@@ -1,0 +1,30 @@
+.Auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .AuthContainer {
+    position: relative;
+
+    .goBackBtn {
+      position: absolute;
+      top: 0;
+      background-color: #111538;
+      border-radius: 50%;
+      color: #ffffff;
+      display: flex;
+      border: none;
+      align-items: center;
+      height: 30px;
+      width: 30px;
+      justify-content: center;
+      transition: all 0.2s;
+
+      &:hover {
+        scale: 1.06;
+        cursor: pointer;
+      }
+    }
+  }
+}

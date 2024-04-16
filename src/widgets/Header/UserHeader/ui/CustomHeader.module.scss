@@ -29,18 +29,19 @@
       }
     }
 
-    .headerButton {
+    .headerProfile {
       width: 120px;
-      height: 45px;
-      background-color: #ffb700;
+      height: 40px;
+      border-radius: 10px;
+      background-color: transparent;
+      color: #dddddd;
+      border: 1px solid #ddd;
       font-family: Roboto, sans-serif;
-      font-weight: 600;
-      border: none;
-      transition: all 0.4s;
-
-      &:hover {
-        background-color: #ff8000;
-        cursor: pointer;
+      cursor: pointer;
+      transition: all ease-in 350ms;
+      &:hover{
+        background-color: #dddddd;
+        color: #000000;
       }
     }
   }

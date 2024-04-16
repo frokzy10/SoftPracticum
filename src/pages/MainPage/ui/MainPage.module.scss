@@ -1,0 +1,20 @@
+.MainPage {
+  padding: 30px 0;
+
+  .MainPageText {
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    @media (max-width: 1186px) {
+      font-size: 40px;
+    }
+    @media(max-width: 985px){
+      font-size: 34px;
+    }
+    @media (max-width: 500px) {
+      font-size: 25px;
+    }
+  }
+}
