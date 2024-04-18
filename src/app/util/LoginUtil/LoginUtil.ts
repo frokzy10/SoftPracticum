@@ -1,9 +1,9 @@
 import axios from "axios";
 import {API_URL} from "../../../shared/api/api";
 import {NavigateFunction} from "react-router-dom";
-import {useAppDispatch} from "../../../shared/hooks/useAppDispatch/useAppDispatch";
 import {setAuthDataAction} from "../../../entities/isLoggedIn/types/isLoggedInTypes";
 import {Dispatch} from "redux";
+import {setEmailAndPassword} from "../../../entities/User/types/UserTypes";
 
 
 export const LoginUtil = async (
@@ -43,9 +43,9 @@ export const LoginUtil = async (
         });
 
         if (res.data.message === "exist") {
-            console.log("Вы в game");
             dispatch(setAuthDataAction(true))
-            navigate("/game", { state: { id: email, password: password } });
+            dispatch(setEmailAndPassword(email,password));
+            navigate("/game");
         } else if (res.data.message === "notexist") {
             setEmailError("Вы не зарегистрированы");
         }

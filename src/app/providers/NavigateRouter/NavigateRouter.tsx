@@ -49,10 +49,6 @@ const Router: React.FC = () => {
                     :
                     <Routes>
                         <Route path="/log_in" element={<LoginPage/>}/>
-                        <Route
-                            path="/game/profile"
-                            element={<ProtectedRoute isLoggedIn={isloggedIn}><ProfilePage/></ProtectedRoute>}
-                        />
                     </Routes>
             }
         </>
