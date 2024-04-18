@@ -4,15 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d428e33-5d9f-43ff-af20-aa3e33a026c9" name="Changes" comment="">
+    <list default="true" id="14430afd-cb8f-4254-8183-f0bad9cec53d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/entities/isLoggedIn/reducer/isLoggedIn.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/isLoggedIn/selectors/isLoggedInSelectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/isLoggedIn/types/isLoggedInTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/spinner/Spinner.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/spinner/Spinner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/nurdinHakaton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nurdinHakaton.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/mongo/mongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/mongo/mongo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/providers/NavigateRouter/NavigateRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/NavigateRouter/NavigateRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/storeSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/storeSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/ui/StoreProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/ui/StoreProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/providers/router/config/RouterConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/router/config/RouterConfig.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/providers/router/ui/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/router/ui/AppRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/types/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/types/global.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/util/AuthUtil/AuthUtil.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/util/AuthUtil/AuthUtil.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/util/LoginUtil/LoginUtil.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/util/LoginUtil/LoginUtil.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Form/model/reducer/FormReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Form/model/reducer/FormReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Form/model/selectors/FormSelectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Form/model/selectors/FormSelectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Form/model/types/FormTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Form/model/types/FormTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AuthPage/ui/AuthPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AuthPage/ui/AuthPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/GamePage/ui/GamePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/GamePage/ui/GamePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginPage/ui/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginPage/ui/LoginPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/ui/MainPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/ui/MainPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/ui/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/ui/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage/ui/ProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage/ui/ProfilePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/hooks/useAppDispatch/useAppDispatch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/hooks/useAppDispatch/useAppDispatch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/FormDetails/ui/FormDetails.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/FormDetails/ui/FormDetails.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/FormDetails/ui/FormDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/FormDetails/ui/FormDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/Header/DontHeader/DontHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/DontHeader/DontHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/Header/UserHeader/ui/CustomHeader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/UserHeader/ui/CustomHeader.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/Header/UserHeader/ui/CustomHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/UserHeader/ui/CustomHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/Header/ui/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/ui/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/Header/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/ui/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/LoginDetails/LoginDetails.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/LoginDetails/LoginDetails.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/LoginDetails/LoginDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/LoginDetails/LoginDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,27 +66,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="cf11fa22dd0fd97905fbbd4ec481493936f59198" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2f381Yq8g2xnFGR09GMkZvOPYVC" />
+  <component name="ProjectId" id="2fDmjQJdINDpJZY6PAwKAm66qQs" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -52,41 +86,37 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Node.js.server.js.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "cf11fa22",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/nurdinHakaton",
+    "git-widget-placeholder": "f38ef24f",
+    "last_opened_file_path": "/Users/nurdinbakytbekov/Downloads/Telegram Desktop/nurdinHakaton",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\user\\Desktop\\nurdinHakaton\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "/Users/nurdinbakytbekov/Downloads/Telegram Desktop/nurdinHakaton/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\nurdinHakaton\src\features\LoginFeatures" />
-    </key>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-2e7d6887c066-JavaScript-WS-241.15989.47" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5d428e33-5d9f-43ff-af20-aa3e33a026c9" name="Changes" comment="" />
-      <created>1713018186674</created>
+      <changelist id="14430afd-cb8f-4254-8183-f0bad9cec53d" name="Changes" comment="" />
+      <created>1713344156172</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1713018186674</updated>
-      <workItem from="1713018187754" duration="498000" />
-      <workItem from="1713075773137" duration="7088000" />
-      <workItem from="1713086747181" duration="6464000" />
-      <workItem from="1713093750984" duration="5190000" />
-      <workItem from="1713256933452" duration="6407000" />
-      <workItem from="1713263536979" duration="10765000" />
+      <updated>1713344156172</updated>
+      <workItem from="1713344157235" duration="5926000" />
+      <workItem from="1713420647940" duration="66000" />
+      <workItem from="1713422042819" duration="5735000" />
     </task>
     <servers />
   </component>

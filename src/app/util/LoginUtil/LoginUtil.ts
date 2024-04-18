@@ -1,13 +1,18 @@
 import axios from "axios";
 import {API_URL} from "../../../shared/api/api";
 import {NavigateFunction} from "react-router-dom";
+import {useAppDispatch} from "../../../shared/hooks/useAppDispatch/useAppDispatch";
+import {setAuthDataAction} from "../../../entities/isLoggedIn/types/isLoggedInTypes";
+import {Dispatch} from "redux";
+
 
 export const LoginUtil = async (
     email: string,
     password: string,
     setEmailError: (error: string) => void,
     setPasswordError: (error: string) => void,
-    navigate:NavigateFunction
+    navigate:NavigateFunction,
+    dispatch:Dispatch
 ) => {
     const isEmailValid = (email: string) => {
         const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -39,7 +44,8 @@ export const LoginUtil = async (
 
         if (res.data.message === "exist") {
             console.log("Вы в game");
-            return navigate("/game", { state: { id: email, password: password } });
+            dispatch(setAuthDataAction(true))
+            navigate("/game", { state: { id: email, password: password } });
         } else if (res.data.message === "notexist") {
             setEmailError("Вы не зарегистрированы");
         }

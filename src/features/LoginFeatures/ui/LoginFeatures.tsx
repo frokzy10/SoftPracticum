@@ -4,11 +4,13 @@ import {ChangeEvent, useState} from "react";
 
 import LoginDetails from "../../../widgets/LoginDetails/LoginDetails";
 import {LoginUtil} from "../../../app/util/LoginUtil/LoginUtil";
+import {useAppDispatch} from "../../../shared/hooks/useAppDispatch/useAppDispatch";
 
 
 
 const LoginFeatures = () => {
     const navigate = useNavigate();
+    const dispatch = useAppDispatch()
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState("");
     const [emailError,setEmailError] = useState<string>("");
@@ -16,10 +18,9 @@ const LoginFeatures = () => {
 
     const handleLoginBtn = async (e:ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
-        await LoginUtil(email,password,setPasswordError,setEmailError,navigate)
+        await LoginUtil(email,password,setPasswordError,setEmailError,navigate,dispatch)
         setPassword("")
         setEmail("")
-sadasdasdasdasdsadfasdfsadfsdafs
     }
 
     return (

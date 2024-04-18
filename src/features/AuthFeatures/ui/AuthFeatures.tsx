@@ -4,10 +4,12 @@ import FormDetails from "../../../widgets/FormDetails/ui/FormDetails";
 import cls from "./AuthFeatures.module.scss"
 import {HiOutlineArrowLeft} from "react-icons/hi";
 import {AuthUtil} from "../../../app/util/AuthUtil/AuthUtil";
+import {useAppDispatch} from "../../../shared/hooks/useAppDispatch/useAppDispatch";
 
 
 const AuthFeatures = () => {
     const navigate = useNavigate();
+    const dispatch = useAppDispatch()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [emailError, setEmailError] = useState<string>("");
@@ -19,7 +21,7 @@ const AuthFeatures = () => {
 
     const authSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
-        await AuthUtil(password,email,setEmailError,setPasswordError,navigate)
+        await AuthUtil(password,email,setEmailError,setPasswordError,navigate,dispatch);
         setPassword('');
         setEmail('');
     };

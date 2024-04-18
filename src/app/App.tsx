@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Header from "../widgets/Header/ui/Header";
 import AppRouter from "./providers/router/ui/AppRouter";
-import {useLocation, useNavigate} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import DontHeader from "../widgets/Header/DontHeader/DontHeader";
-import CustomHeader from "../widgets/Header/UserHeader/ui/CustomHeader";
 import Router from "./providers/NavigateRouter/NavigateRouter";
 
 
