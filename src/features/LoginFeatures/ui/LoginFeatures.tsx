@@ -1,19 +1,13 @@
 import {useNavigate} from "react-router-dom";
 import cls from "./LoginFeatures.module.scss";
 import {ChangeEvent, useState} from "react";
-
 import LoginDetails from "../../../widgets/LoginDetails/LoginDetails";
 import {LoginUtil} from "../../../app/util/LoginUtil/LoginUtil";
-import {useAppDispatch} from "../../../shared/hooks/useAppDispatch/useAppDispatch";
-import {useSelector} from "react-redux";
-import {isloggedInSelectors} from "../../../entities/isLoggedIn/selectors/isLoggedInSelectors";
 
 
 
 const LoginFeatures = () => {
     const navigate = useNavigate();
-    const dispatch = useAppDispatch();
-    const user = useSelector(isloggedInSelectors.getIsLoggedInUser);
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState("");
     const [emailError,setEmailError] = useState<string>("");
