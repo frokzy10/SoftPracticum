@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14430afd-cb8f-4254-8183-f0bad9cec53d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/controllers/user-controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/dtos/user-dtos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/model/token-model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/model/user-model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/router/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/services/mail-service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/services/token-service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/services/user-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/mongo/mongo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="14430afd-cb8f-4254-8183-f0bad9cec53d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +67,7 @@
       <workItem from="1713420647940" duration="66000" />
       <workItem from="1713422042819" duration="5735000" />
       <workItem from="1713436996914" duration="6687000" />
-      <workItem from="1713530951561" duration="10121000" />
+      <workItem from="1713530951561" duration="10543000" />
     </task>
     <servers />
   </component>
