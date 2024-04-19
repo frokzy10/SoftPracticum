@@ -9,7 +9,6 @@ import {useAppDispatch} from "../../../shared/hooks/useAppDispatch/useAppDispatc
 
 const AuthFeatures = () => {
     const navigate = useNavigate();
-    const dispatch = useAppDispatch()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [emailError, setEmailError] = useState<string>("");
@@ -21,7 +20,7 @@ const AuthFeatures = () => {
 
     const authSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
-        await AuthUtil(password,email,setEmailError,setPasswordError,navigate,dispatch);
+        await AuthUtil(password,email,setEmailError,setPasswordError);
         setPassword('');
         setEmail('');
     };

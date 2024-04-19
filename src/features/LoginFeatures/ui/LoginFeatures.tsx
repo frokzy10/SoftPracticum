@@ -21,7 +21,7 @@ const LoginFeatures = () => {
 
     const handleLoginBtn = async (e:ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
-        await LoginUtil(email,password,setPasswordError,setEmailError,navigate,dispatch)
+        await LoginUtil(email,password,setPasswordError,setEmailError)
         setPassword("")
         setEmail("")
     }
