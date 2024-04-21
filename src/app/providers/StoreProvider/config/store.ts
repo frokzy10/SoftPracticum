@@ -1,15 +1,15 @@
 import {applyMiddleware, combineReducers, legacy_createStore as createStore} from "redux";
-import {FormReducer} from "../../../../entities/Form/model/reducer/FormReducer";
 import asyncMiddleware from "./middleware";
 import {StoreSchema} from "./storeSchema";
 import {authStatus} from "../../../../entities/isLoggedIn/reducer/isLoggedIn";
 import {UserReducer} from "../../../../entities/User/reducer/UserReducer";
+import {LoginFormReducer} from "../../../../entities/LoginForm/reducer/LoginForm";
 
 
 const rootReducer = combineReducers<StoreSchema>({
-    form: FormReducer,
     isLoggedIn: authStatus,
-    user:UserReducer
+    user:UserReducer,
+    loginForm:LoginFormReducer
 })
 const store = createStore(rootReducer, applyMiddleware(asyncMiddleware));
 export {store, rootReducer};

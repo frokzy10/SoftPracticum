@@ -1,12 +1,12 @@
-import {FormReducer} from "../../../../entities/Form/model/reducer/FormReducer";
 import {authStatus} from "../../../../entities/isLoggedIn/reducer/isLoggedIn";
 import {UserReducer} from "../../../../entities/User/reducer/UserReducer";
+import {LoginFormReducer} from "../../../../entities/LoginForm/reducer/LoginForm";
 
 
 interface StoreSchema {
-    form: typeof FormReducer,
     isLoggedIn: typeof authStatus,
-    user:typeof UserReducer
+    user:typeof UserReducer,
+    loginForm:typeof LoginFormReducer
 }
 
 interface IActions {

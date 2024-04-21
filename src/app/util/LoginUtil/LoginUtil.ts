@@ -1,9 +1,15 @@
+import {Dispatch} from "redux";
+import AuthServices from "../../../entities/Form/services/AuthServices";
+import {LoginSuccessAction} from "../../../entities/LoginForm/types/LoginFormTypes";
+import {NavigateFunction} from "react-router-dom";
+
 export const LoginUtil = async (
     email: string,
     password: string,
     setEmailError: (error: string) => void,
     setPasswordError: (error: string) => void,
-
+    dispatch: Dispatch,
+    navigate: NavigateFunction
 ) => {
     const isEmailValid = (email: string) => {
         const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -19,11 +25,18 @@ export const LoginUtil = async (
     const passwordValid = isPasswordValid(password);
 
     setEmailError("Неправильно введен email")
-    setPasswordError(
-        passwordValid ? "Неправильно введен пароль" : ""
-    );
-
+    setPasswordError(passwordValid ? "" :"Ошибка при валидации")
     if (!emailValid || !passwordValid) {
         return;
+    }
+    try {
+        const res = await AuthServices.login(email, password);
+        if (res.status === 200) {
+            navigate("/game");
+        }
+
+        dispatch(LoginSuccessAction(email, password));
+    } catch (e) {
+        setEmailError("Неправильно введена почта или пароль")
     }
 }

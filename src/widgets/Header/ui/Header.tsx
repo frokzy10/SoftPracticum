@@ -45,8 +45,8 @@ const Header = () => {
                             <li>Контакты</li>
                             <li>Нурдин</li>
                         </ul>
-                        <Link to="/log_in">
-                            <button className={cls.headerButton}>
+                        <Link to="/log_in" style={{display: "flex", justifyContent: "flex-end"}}>
+                            <button  className={cls.headerButton}>
                                 Войти
                             </button>
                         </Link>
