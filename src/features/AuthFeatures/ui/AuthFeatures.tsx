@@ -21,8 +21,7 @@ const AuthFeatures = () => {
     const authSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
         await AuthUtil(password,email,setEmailError,setPasswordError);
-        setPassword('');
-        setEmail('');
+        navigate("/game")
     };
 
     return (

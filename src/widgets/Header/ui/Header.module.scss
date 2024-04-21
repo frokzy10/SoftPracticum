@@ -1,6 +1,7 @@
 .header {
   background-color: #020b18;
   padding: 20px 0;
+  z-index: 1000;
 
   .headerContainer {
     display: flex;
@@ -16,8 +17,11 @@
       }
     }
 
-
     nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
       ul {
         li {
           display: inline-block;
@@ -25,6 +29,34 @@
           color: #ffffff;
           font-size: 20px;
           font-family: Aeroport, sans-serif;
+        }
+      }
+
+      @media screen and (max-width: 668px) {
+        display: none;
+      }
+    }
+
+    .burgerMenu {
+      display: none;
+      color: #ffffff;
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111538;
+      border: 1px solid #1b2052;
+      padding: 1.5%;
+
+      .FaBars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 668px) {
+        display: block;
+        margin-top: 10px;
+        nav {
+          display: none;
         }
       }
     }
@@ -42,6 +74,84 @@
         background-color: #ff8000;
         cursor: pointer;
       }
+
+      @media screen and (max-width: 668px) {
+        display: none;
+      }
+    }
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    z-index: 999;
+
+    .navContainer {
+      nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #111538;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          margin: 0;
+
+          li {
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-family: "Open sans",sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+          }
+        }
+
+        button {
+            width: 120px;
+            height: 45px;
+            background-color: #ffb700;
+            font-family: Roboto, sans-serif;
+            font-weight: 600;
+            border: none;
+            transition: all 0.4s;
+
+            &:hover {
+              background-color: #ff8000;
+              cursor: pointer;
+            }
+        }
+      }
+    }
+
+    .burgerClose {
+      .closeModal {
+        color: #ffffff;
+        font-size: 29px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    &.show {
+      display: flex;
     }
   }
 
