@@ -44,12 +44,12 @@
       cursor: pointer;
       background-color: #111538;
       border: 1px solid #1b2052;
-      padding: 1.5%;
-
+      width: 40px;
+      height: 40px;
       .FaBars {
         display: flex;
         align-items: center;
-        justify-content: center;
+        margin: 0 auto;
       }
 
       @media screen and (max-width: 668px) {
@@ -103,7 +103,7 @@
         height: 100%;
         background-color: #111538;
         border-radius: 5px;
-        padding: 20px;
+        padding: 35px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
         ul {
@@ -143,10 +143,10 @@
     .burgerClose {
       .closeModal {
         color: #ffffff;
-        font-size: 29px;
+        font-size: 35px;
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
       }
     }
 

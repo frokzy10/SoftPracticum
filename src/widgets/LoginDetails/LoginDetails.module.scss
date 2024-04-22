@@ -41,11 +41,14 @@
     .AuthSubtitle {
       font-family: Poppins, sans-serif;
       font-weight: 400;
+      width: 340px;
       font-size: 17px;
       color: #dddddd;
-      width: 350px;
       text-align: center;
       margin-bottom: 7%;
+      @media (max-width: 435px) {
+        width: 290px;
+      }
     }
 
     .InputContainer {

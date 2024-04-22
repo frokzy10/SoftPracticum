@@ -1,18 +1,31 @@
 import {useNavigate} from "react-router-dom";
-import {ChangeEvent, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 import FormDetails from "../../../widgets/FormDetails/ui/FormDetails";
 import cls from "./AuthFeatures.module.scss"
 import {HiOutlineArrowLeft} from "react-icons/hi";
 import {AuthUtil} from "../../../app/util/AuthUtil/AuthUtil";
 import {useAppDispatch} from "../../../shared/hooks/useAppDispatch/useAppDispatch";
+import AuthServices from "../../../entities/Form/services/AuthServices";
 
 
 const AuthFeatures = () => {
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [emailError, setEmailError] = useState<string>("");
     const [passwordError, setPasswordError] = useState<string>("");
+
+    useEffect(() => {
+        const handleAuth = async ()=>{
+            try{
+                await AuthServices.register(email,password,navigate,dispatch);
+            }catch (e){
+                console.log(e)
+            }
+        }
+        handleAuth();
+    }, []);
 
     const handleGoBack = () => {
         navigate(-1);
@@ -20,8 +33,7 @@ const AuthFeatures = () => {
 
     const authSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
-        await AuthUtil(password,email,setEmailError,setPasswordError);
-        navigate("/game")
+        await AuthUtil(password,email,setEmailError,setPasswordError,dispatch,navigate);
     };
 
     return (

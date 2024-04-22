@@ -5,12 +5,17 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const router = require("./jwtToken/router/router");
 const mongoose = require('mongoose');
-const PORT = process.env.PORT;
+const errmiddleware = require("../server/jwtToken/middlewares/error-middleware")
+
 app.use(express.json());
 app.use(cookieParser())
 app.use(express.urlencoded({extended: true}));
-app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: process.env.CLIENT_URL
+}));
 app.use('/api',router);
+app.use(errmiddleware)
 
 const start = async () => {
     try {

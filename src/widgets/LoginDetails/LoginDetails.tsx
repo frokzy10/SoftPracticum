@@ -4,27 +4,35 @@ import {Link, NavigateFunction} from "react-router-dom";
 import {HiOutlineArrowLeft} from "react-icons/hi";
 
 interface ILoginDetailsProps {
-    setPassword:React.Dispatch<React.SetStateAction<string>>
-    setEmail:React.Dispatch<React.SetStateAction<string>>,
-    navigate:NavigateFunction,
-    emailError:string,
-    passwordError:string,
-    handleLoginBtn:any,
+    setPassword: React.Dispatch<React.SetStateAction<string>>
+    setEmail: React.Dispatch<React.SetStateAction<string>>,
+    navigate: NavigateFunction,
+    emailError: string,
+    passwordError: string,
+    handleLoginBtn: any,
     setPasswordError: (error: string) => void,
-    password:string,
-    email:string
+    password: string,
+    email: string
 }
 
-const LoginDetails = (props:ILoginDetailsProps) => {
-    const {setPassword,email,password,setPasswordError,setEmail,navigate,handleLoginBtn,emailError,passwordError} = props;
-    const emailHandler = (e:ChangeEvent<HTMLInputElement>) => {
+const LoginDetails = (props: ILoginDetailsProps) => {
+    const {
+        setPassword,
+        email,
+        password,
+        setPasswordError,
+        setEmail,
+        navigate,
+        handleLoginBtn,
+        emailError,
+        passwordError
+    } = props;
+    const emailHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
     }
-    const passwordHandler = (e:ChangeEvent<HTMLInputElement>)=>{
+    const passwordHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setPassword(e.target.value);
-        const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d).{6,}$/;
-        const isPasswordValid = passwordRegex.test(e.target.value);
-        setPasswordError(isPasswordValid ? "" : "Пароль должен иметь 6 сим-лов,и цифры");
+        setPasswordError(password.length<6 ? "" : "Пароль должен иметь 6 сим-лов,и цифры");
     }
     const handleGoBack = () => {
         navigate(-1)

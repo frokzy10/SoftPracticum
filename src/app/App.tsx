@@ -5,16 +5,22 @@ import {useLocation} from "react-router-dom";
 import DontHeader from "../widgets/Header/DontHeader/DontHeader";
 import Router from "./providers/NavigateRouter/NavigateRouter";
 import {useSelector} from "react-redux";
+import {checkToken} from "../entities/LoginForm/thunk/LoginFormThunks";
 
 
 function App() {
     const location = useLocation();
-    const user = useSelector((state:any)=>state.user)
-    useEffect(() => {
-        console.log(location)
-        console.log(user)
-    }, [location]);
+    const user = useSelector((state:any)=>state.loginForm);
 
+    useEffect(() => {
+        console.log(user)
+    }, [user]);
+
+    useEffect(() => {
+        if(localStorage.getItem("token")){
+            checkToken()
+        }
+    }, []);
     if (location.pathname === "/auth" || location.pathname === "/log_in") {
         return (
             <DontHeader/>
