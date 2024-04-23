@@ -13,12 +13,8 @@ function App() {
     const user = useSelector((state:any)=>state.loginForm);
 
     useEffect(() => {
-        console.log(user)
-    }, [user]);
-
-    useEffect(() => {
         if(localStorage.getItem("token")){
-            checkToken()
+            checkToken();
         }
     }, []);
     if (location.pathname === "/auth" || location.pathname === "/log_in") {

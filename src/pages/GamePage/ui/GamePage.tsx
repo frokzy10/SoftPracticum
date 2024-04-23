@@ -1,9 +1,7 @@
-import React, {ChangeEvent} from 'react';
-import {useLocation} from "react-router-dom";
+import React from 'react';
+import {Navigate, useLocation} from "react-router-dom";
 import Router from "../../../app/providers/NavigateRouter/NavigateRouter";
-import CustomHeader from "../../../widgets/Header/UserHeader/ui/CustomHeader";
 import {useSelector} from "react-redux";
-import MainPage from "../../MainPage/ui/MainPage";
 import AuthServices from "../../../entities/Form/services/AuthServices";
 import {logoutSuccess} from "../../../entities/LoginForm/types/LoginFormTypes";
 import {useAppDispatch} from "../../../shared/hooks/useAppDispatch/useAppDispatch";
@@ -14,7 +12,7 @@ const GamePage = () => {
     console.log(isAuth);
     const dispatch = useAppDispatch()
     if(!isAuth){
-        return <MainPage/>
+        return <Navigate to="/"/>
     }
 
     const handleLogout = async ()=>{

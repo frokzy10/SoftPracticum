@@ -5,43 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43adb809-11d0-424d-beb8-5ef7a4ff108a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/exceptions/api-error.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/middlewares/auth-middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/jwtToken/middlewares/error-middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Form/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Form/models/AuthResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Form/models/IUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Form/services/AuthServices.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Form/services/UserService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/LoginForm/reducer/LoginForm.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/LoginForm/thunk/LoginFormThunks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/LoginForm/types/LoginFormTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/jwtToken/controllers/user-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/controllers/user-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/jwtToken/router/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/router/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/jwtToken/services/token-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/services/token-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/jwtToken/services/user-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/services/user-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/storeSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/storeSchema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/util/AuthUtil/AuthUtil.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/util/AuthUtil/AuthUtil.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/util/LoginUtil/LoginUtil.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/util/LoginUtil/LoginUtil.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Form/model/reducer/FormReducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Form/model/selectors/FormSelectors.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Form/model/types/FormTypes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/GamePage/ui/GamePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/GamePage/ui/GamePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/FormDetails/ui/FormDetails.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/FormDetails/ui/FormDetails.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Header/ui/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/ui/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Header/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/ui/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/LoginDetails/LoginDetails.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/LoginDetails/LoginDetails.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/LoginDetails/LoginDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/LoginDetails/LoginDetails.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +73,8 @@
       <workItem from="1713669077898" duration="26807000" />
       <workItem from="1713707174320" duration="381000" />
       <workItem from="1713786798353" duration="143000" />
-      <workItem from="1713786944411" duration="6300000" />
+      <workItem from="1713786944411" duration="7589000" />
+      <workItem from="1713857161348" duration="1531000" />
     </task>
     <servers />
   </component>

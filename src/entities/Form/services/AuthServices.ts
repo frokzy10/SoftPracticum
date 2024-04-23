@@ -43,6 +43,8 @@ export default class AuthServices {
         } catch (e) {
             console.error("Ошибка входа:", e);
             throw e;
+        }finally {
+            dispatch(setLoadingAction(false));
         }
 
     }

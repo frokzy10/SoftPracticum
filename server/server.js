@@ -12,9 +12,11 @@ app.use(cookieParser())
 app.use(express.urlencoded({extended: true}));
 app.use(cors({
     credentials: true,
-    origin: process.env.CLIENT_URL
+    origin: "http://localhost:9000",
+    optionSuccessStatus:200
 }));
-app.use('/api',router);
+
+app.use('/api', require('./jwtToken/router/router'));
 app.use(errmiddleware)
 
 const start = async () => {
