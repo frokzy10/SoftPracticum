@@ -3,9 +3,10 @@ import {AppRouteProps, routerConfig} from "../config/RouterConfig";
 import {Route, Routes} from "react-router-dom";
 
 const AppRouter = () => {
-    const render = useCallback((route:AppRouteProps) => {
+    const render = useCallback((route:AppRouteProps,index:number) => {
         return (
             <Route
+                key={index}
                 path={route.path}
                 element={route.element}
             />

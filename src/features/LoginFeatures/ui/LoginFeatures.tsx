@@ -1,35 +1,26 @@
 import {useNavigate} from "react-router-dom";
 import cls from "./LoginFeatures.module.scss";
-import {ChangeEvent, useEffect, useState} from "react";
+import {ChangeEvent, useContext, useState} from "react";
 import LoginDetails from "../../../widgets/LoginDetails/LoginDetails";
 import {LoginUtil} from "../../../app/util/LoginUtil/LoginUtil";
-import {useAppDispatch} from "../../../shared/hooks/useAppDispatch/useAppDispatch";
-import AuthServices from "../../../entities/Form/services/AuthServices";
+import {STORECONTEXT} from "../../../index";
+import {observer} from "mobx-react-lite";
 
 
 
 const LoginFeatures = () => {
     const navigate = useNavigate();
-    const dispatch = useAppDispatch()
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState("");
     const [emailError,setEmailError] = useState<string>("");
     const [passwordError,setPasswordError] = useState<string>("")
+    const {store} = useContext(STORECONTEXT);
 
-    useEffect(() => {
-        const handleLogin = async () => {
-            try {
-                await AuthServices.login(email, password, navigate, dispatch);
-            } catch (error) {
-                console.error('Ошибка входа:', error);
-            }
-        };
-        handleLogin();
-    }, []);
-
-    const handleLoginBtn = async (e:ChangeEvent<HTMLFormElement>) => {
+    const handleLoginBtn = (e:ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
-        await LoginUtil(email,password,setPasswordError,setEmailError,dispatch,navigate)
+        LoginUtil(email,password,setPasswordError,setEmailError);
+        const res = store.login(email,password,navigate);
+        console.log(res);
     }
 
     return (
@@ -49,4 +40,4 @@ const LoginFeatures = () => {
     );
 };
 
-export default LoginFeatures;
+export default observer(LoginFeatures);

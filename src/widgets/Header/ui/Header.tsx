@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import cls from "./Header.module.scss";
 import {Link} from "react-router-dom";
 import {IoMdClose} from "react-icons/io";
 import {FaBars} from "react-icons/fa";
+import {STORECONTEXT} from "../../../index";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-
+    const {store} = useContext(STORECONTEXT);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     }
@@ -27,11 +28,19 @@ const Header = () => {
                         <li>Контакты</li>
                         <li>Нурдин</li>
                     </ul>
-                    <Link to="/log_in">
-                        <button className={cls.headerButton}>
-                            Войти
-                        </button>
-                    </Link>
+                    {store.isAuth ? (
+                        <Link to="/game">
+                            <button className={cls.headerButton}>
+                                Войти
+                            </button>
+                        </Link>
+                    ) : (
+                        <Link to="/log_in">
+                            <button className={cls.headerButton}>
+                                Войти
+                            </button>
+                        </Link>
+                    )}
                 </nav>
                 <button className={cls.burgerMenu} onClick={toggleMenu}>
                     <FaBars className={cls.FaBars}/>
@@ -45,11 +54,19 @@ const Header = () => {
                             <li>Контакты</li>
                             <li>Нурдин</li>
                         </ul>
-                        <Link to="/log_in" style={{display: "flex", justifyContent: "flex-end"}}>
-                            <button  className={cls.headerButton}>
-                                Войти
-                            </button>
-                        </Link>
+                        {store.isAuth ? (
+                            <Link to="/game">
+                                <button className={cls.headerButton}>
+                                    Войти
+                                </button>
+                            </Link>
+                        ) : (
+                            <Link to="/log_in">
+                                <button className={cls.headerButton}>
+                                    Войти
+                                </button>
+                            </Link>
+                        )}
                         <div className={cls.burgerClose} onClick={closeMenu}>
                             <div className={cls.closeModal}>
                                 <IoMdClose/>

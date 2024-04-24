@@ -1,0 +1,54 @@
+.profileAll{
+  background-color: #020b18;
+  width: 100%;
+  height: 100vh;
+  .profileContainer {
+    max-width: 1400px;
+    display: grid;
+    margin: 0 auto;
+    padding: 0 2%;
+
+    .profileBtnContainer {
+      display: flex;
+      justify-content: flex-end;
+
+      .profileLogoutBtn {
+        display: flex;
+        width: 150px;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        background-color:#ffb700;
+        border: none;
+        font-family: Poppins,sans-serif;
+      }
+    }
+
+    .profileHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .profileLogo {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+      }
+
+      .headerRightSide {
+        display: flex;
+        flex-direction: column;
+
+        .profileEmail {
+          color: #ffffff;
+          font-family: "Open sans", sans-serif;
+        }
+
+        .profileStatus {
+          color: #ffffff;
+          font-family: Nunito, sans-serif;
+        }
+      }
+    }
+  }
+}

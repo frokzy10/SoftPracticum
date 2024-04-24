@@ -1,19 +1,18 @@
-
 import {RouteProps} from "react-router/dist/lib/components";
 import MainPage from "../../../../pages/MainPage/ui/MainPage";
-
 import GamePage from "../../../../pages/GamePage/ui/GamePage";
 import AuthPage from "../../../../pages/AuthPage/ui/AuthPage";
 import LoginPage from "../../../../pages/LoginPage/ui/LoginPage";
 import ProfilePage from "../../../../pages/ProfilePage/ui/ProfilePage";
-import Router from "../../NavigateRouter/NavigateRouter";
+import LevelPage from "../../../../pages/LevelPage/ui/LevelPage";
 
 export enum AppRoutes {
     MAIN = "main",
     AUTH = "auth",
     LOG_IN = "login",
     PROFILE = "profile",
-    GAME = "game"
+    GAME = "game",
+    LEVEL = "level",
 }
 
 export type AppRouteProps = RouteProps & {}
@@ -23,7 +22,8 @@ export const RoutePaths: Record<AppRoutes, string> = {
     [AppRoutes.AUTH]: "/auth",
     [AppRoutes.LOG_IN]: "/log_in",
     [AppRoutes.PROFILE]:"/game/profile",
-    [AppRoutes.GAME]:"/game"
+    [AppRoutes.GAME]:"/game",
+    [AppRoutes.LEVEL]:"/game/:id"
 }
 
 
@@ -48,5 +48,9 @@ export const routerConfig: Record<AppRoutes, AppRouteProps> = {
     [AppRoutes.GAME]:{
         path:RoutePaths.game,
         element:<GamePage/>
+    },
+    [AppRoutes.LEVEL]:{
+        path:RoutePaths.level,
+        element:<LevelPage/>
     }
 }

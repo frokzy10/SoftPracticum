@@ -1,38 +1,51 @@
-import React from 'react';
-import {Navigate, useLocation} from "react-router-dom";
-import Router from "../../../app/providers/NavigateRouter/NavigateRouter";
-import {useSelector} from "react-redux";
-import AuthServices from "../../../entities/Form/services/AuthServices";
-import {logoutSuccess} from "../../../entities/LoginForm/types/LoginFormTypes";
-import {useAppDispatch} from "../../../shared/hooks/useAppDispatch/useAppDispatch";
+import React, {FC, useContext, useEffect, useState} from 'react';
+import {observer} from "mobx-react-lite";
+import axios from "axios";
+import ButtonsById from "../../../features/ButtonsById/ui/ButtonsById";
+import LoginPage from "../../LoginPage/ui/LoginPage";
+import {store, STORECONTEXT} from "../../../index";
+import {Link, useParams} from "react-router-dom";
 
-const GamePage = () => {
-    const {email} = useSelector((state:any)=>state.loginForm.user);
-    const {isAuth} = useSelector((state:any)=>state.loginForm);
-    console.log(isAuth);
-    const dispatch = useAppDispatch()
-    if(!isAuth){
-        return <Navigate to="/"/>
+
+interface IGameSchema {
+    _id: string,
+    title: string,
+    description: string,
+    video: string,
+    output: string
+}
+
+const GamePage: FC = () => {
+    const {store} = useContext(STORECONTEXT);
+    const {id} = useParams()
+    const [games, setGames] = useState<IGameSchema[]>([]);
+
+    useEffect(() => {
+        const fetchGames = async () => {
+            try {
+                const response = await axios.get('http://localhost:8000/api/games');
+                setGames(response.data);
+            } catch (error) {
+                console.error('Error fetching games:', error);
+            }
+        };
+        fetchGames();
+    }, []);
+    if (!store.isAuth) {
+        return <LoginPage/>
     }
 
-    const handleLogout = async ()=>{
-
-        try{
-            const res = await AuthServices.logout();
-            console.log(res)
-            localStorage.removeItem("token");
-            dispatch(logoutSuccess())
-        }catch (e){
-            console.log(e)
-        }
-    }
     return (
-        <>
-            <h2 style={{color:"white"}}>{isAuth ? `Пользователь авторизован ${email}`:"Авторизуйтесь"}</h2>
-            <button onClick={handleLogout}>Выйти</button>
-            <Router/>
-        </>
-    );
+        <ul>
+            {games.map((game, index) => (
+                <li key={index}>
+                    <Link to={`/game/${game._id}`}>
+                        <button>{game.title}</button>
+                    </Link>
+                </li>
+            ))}
+        </ul>
+    )
 };
 
-export default GamePage;
+export default observer(GamePage);

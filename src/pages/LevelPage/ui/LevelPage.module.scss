@@ -1,0 +1,95 @@
+.levelMain {
+
+  .goBack {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 1.5%;
+    width: 70px;
+
+    svg {
+      width: 20px;
+      color: #dddddd;
+    }
+
+    span {
+      color: #ddd;
+      font-family: "Open sans", sans-serif;
+    }
+  }
+
+  .levelHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2%;
+
+    video {
+      width: 50%;
+    }
+
+    .levelRightSide {
+      h2 {
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+      }
+
+      p {
+        font-family: "Open sans", sans-serif;
+        font-weight: 400;
+        color: #dddddd;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .levelContent {
+    background-color: #1b2052;
+    border-radius: 8px;
+    .levelContentText {
+      text-align: center;
+      font-family: Nunito, sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+      color: #ffffff;
+      padding-top: 2%;
+      margin-top: 2%;
+    }
+    .gameTest{
+      margin-top: 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .inputGame{
+        width: 55%;
+        height: 38px;
+        font-family: "Open sans",sans-serif;
+        outline: none;
+        transition: all 400ms;
+        border: none;
+          padding: 1%;
+        &:focus{
+          background-color: #111538;
+          color: #ffffff;
+          &::placeholder{
+            color: #dddddd;
+          }
+        }
+      }
+      .checkGameBtn{
+        width: 90px;
+        height: 38px;
+        background-color: rgba(255, 115, 0, 0.79);
+        border: none;
+        color: #ffffff;
+        font-family: "Open sans",sans-serif;
+        transition: all 400ms;
+        &:hover{
+          cursor: pointer;
+          background-color: rgb(255, 115, 0)
+        }
+      }
+    }
+  }
+}
