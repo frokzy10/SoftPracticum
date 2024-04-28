@@ -6,4 +6,9 @@ declare module '*.scss' {
     export = classNames;
 }
 
-declare type TNullable<T> = T | null
+declare type TNullable<T> = T | null;
+
+declare module "*.png" {
+    const value: any;
+    export default value;
+}

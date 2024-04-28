@@ -28,7 +28,11 @@
           font-family: Aeroport, sans-serif;
         }
       }
+      @media (max-width: 630px) {
+        display: none;
+      }
     }
+    
 
     .headerProfile {
       width: 120px;

@@ -6,28 +6,34 @@ import DontHeader from "../widgets/Header/DontHeader/DontHeader";
 import CustomHeader from "../widgets/Header/UserHeader/ui/CustomHeader";
 import {STORECONTEXT} from "../index";
 import DontButtonHeader from "../widgets/Header/DontButtonHeader/ui/DontButtonHeader";
+import Footer from "../widgets/Footer/ui/Footer";
 
 
 const App: FC = () => {
-    const location = useLocation();
     const {store} = useContext(STORECONTEXT);
+    const location = useLocation();
 
     useEffect(() => {
         if (localStorage.getItem("token")) {
-            store.checkAuth()
+            store.checkAuth();
         }
     }, [store]);
 
     if (location.pathname === "/game") {
         return (
-            <main className="App">
-                <div className="AppContainer">
-                    <CustomHeader/>
-                    <div className="content">
-                        <AppRouter/>
+            <>
+                <main className="App">
+                    <div className="AppContainer">
+                        <CustomHeader/>
+                        <div className="content">
+                            <AppRouter/>
+                        </div>
                     </div>
+                </main>
+                <div className="footerCon">
+                    <Footer/>
                 </div>
-            </main>
+            </>
         )
     }
 
@@ -38,14 +44,20 @@ const App: FC = () => {
     }
     if (location.pathname === "/game/profile") {
         return (
-            <div className="AppContainer">
-                <DontButtonHeader/>
-                <div className="content">
-                    <AppRouter/>
+            <>
+                <div className="AppContainer">
+                    <DontButtonHeader/>
+                    <div className="content">
+                        <AppRouter/>
+                    </div>
                 </div>
-            </div>
+                <div className="footerCon">
+                    <Footer/>
+                </div>
+            </>
         )
     }
+
 
     return (
         <>
@@ -57,6 +69,9 @@ const App: FC = () => {
                     </div>
                 </div>
             </main>
+            <div className="footerCon">
+                <Footer/>
+            </div>
         </>
     );
 }

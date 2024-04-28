@@ -7,8 +7,8 @@ import {NavigateFunction} from "react-router-dom";
 
 export default class Store {
     user = {} as IUser;
-    isAuth= false;
-    isloading= false;
+    isAuth = false;
+    isLoading = false;
 
     constructor() {
         makeAutoObservable(this)
@@ -23,64 +23,71 @@ export default class Store {
     }
 
     setLoading(bool: boolean) {
-        this.isloading = bool
+        this.isLoading = bool
     }
 
-    async login(email: string, password: string,navigate:NavigateFunction) {
-        this.setLoading(true);
+    async login(email: string, password: string, navigate: NavigateFunction) {
         try {
             const response = await AuthServices.login(email, password);
-            if(response.status === 200){
+            if (response.status === 200) {
                 navigate("/game")
             }
             localStorage.setItem("token", response.data.accessToken);
             this.setAuth(true);
             this.setUser(response.data.user);
-        }catch (e:any){
+        } catch (e: any) {
             console.log(e.response?.data?.message)
-        }finally {
-            this.setLoading(false);
         }
     }
-    async logout(){
-        this.setLoading(true);
+
+    async logout() {
         try {
             const response = await AuthServices.logout();
             console.log(response)
             localStorage.removeItem("token");
             this.setUser({} as IUser);
             this.setAuth(false);
-        }catch (e:any){
+        } catch (e: any) {
             console.log(e.response?.data?.message)
-        }finally {
-            this.setLoading(false);
         }
     }
-    async register(email:string,password:string,navigate:NavigateFunction){
+
+    async register(email: string, password: string, navigate: NavigateFunction) {
         try {
-            const res = await AuthServices.register(email,password);
-            if(res.status === 200){
+            const res = await AuthServices.register(email, password);
+            if (res.status === 200) {
                 navigate("/game")
             }
-            localStorage.setItem("token",res.data.accessToken);
+            localStorage.setItem("token", res.data.accessToken);
             this.setAuth(true);
             this.setUser(res.data.user);
-        }catch (e:any){
+        } catch (e: any) {
             console.log(e.response?.data?.message);
         }
     }
-    async checkAuth(){
-        this.setLoading(true);
+
+    async checkAuth() {
         try {
-            const response = await axios.get<AuthResponse>(`http://localhost:8000/api/refresh`,{withCredentials:true});
+            const response = await axios.get<AuthResponse>(`http://localhost:8000/api/refresh`, {withCredentials: true});
             console.log(response);
-            localStorage.setItem("token",response.data.accessToken);
+            localStorage.setItem("token", response.data.accessToken);
             this.setAuth(true);
             this.setUser(response.data.user);
-        }catch (e:any){
-            console.log(e)
-        }finally {
+            this.setLoading(true);
+        } catch (e: any) {
+            console.log(e);
+        } finally {
             this.setLoading(false);
         }
     }
+    // async UpdatePointInFrontend(point:number){
+    //     try {
+    //         const response = await AuthServices.points(point);
+    //         console.log(response);
+    //         this.setAuth(true);
+    //         this.setUser(response.data.user);
+    //     }catch (e){
+    //         console.log(e)
+    //     }
+    // }
 }

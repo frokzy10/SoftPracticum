@@ -1,28 +1,42 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useContext, useEffect, useState} from 'react';
 import axios from "axios";
 import {observer} from "mobx-react-lite";
 import cls from "./LevelPage.module.scss";
-import {useNavigate, useParams} from "react-router-dom";
+import {Link, useLocation, useNavigate, useParams} from "react-router-dom";
 import {IoMdArrowBack} from "react-icons/io";
 import Spinner from "../../../shared/spinner/Spinner";
+import {STORECONTEXT} from "../../../index";
+import LoginPage from "../../LoginPage/ui/LoginPage";
+import {FaArrowRight} from "react-icons/fa";
 
 interface IGameSchema {
-    _id: string;
-    title: string;
-    description: string;
-    video: string;
-    output: string;
+    _id: string,
+    title: string,
+    description: string,
+    img: string,
+    win: boolean,
+    condition: string,
+    conditionName: string,
+    conditionImg:string
 }
 
 const LevelPage: FC = () => {
-    const {id} = useParams();
+    const {id,gameName} = useParams();
     const [game, setGame] = useState<IGameSchema | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const navigate = useNavigate();
+    const {store} = useContext(STORECONTEXT);
+    const location = useLocation()
 
     const handleBack = () => {
         navigate(-1);
     };
+
+    const updatePoint = 10;
+
+    const handleUpdatePoint = () => {
+
+    }
 
     useEffect(() => {
         const fetchGameById = async () => {
@@ -36,7 +50,16 @@ const LevelPage: FC = () => {
             }
         };
         fetchGameById();
-    }, [id]);
+    }, [id, location.pathname]);
+
+    if(!store.isAuth){
+        return (
+            <>
+                <LoginPage/>
+                <Spinner/>
+            </>
+        )
+    }
 
     return (
         <>
@@ -49,9 +72,8 @@ const LevelPage: FC = () => {
                     <><Spinner/></>
                 ) : game ? (
                     <div className={cls.levelHeader}>
-                        <video controls>
-                            <source src={game.video} type="video/mp4"/>
-                        </video>
+                        <img src={game.img}
+                             alt="img"/>
                         <div className={cls.levelRightSide}>
                             <h2 style={{color: "white"}}>{game.title}</h2>
                             <p style={{color: "white"}}>{game.description}</p>
@@ -63,10 +85,17 @@ const LevelPage: FC = () => {
                 <div className={cls.levelContent}>
                     <p className={cls.levelContentText}>Задание: посмотрите видео и выполните задание снизу!!!</p>
                     <div className={cls.gameTest}>
-                        <input placeholder={"Введите ответ"} type="text" className={cls.inputGame}/>
-                        <button className={cls.checkGameBtn}>Проверить</button>
+                        <div className={cls.levelContentTest}>
+                            <h2>К заданиям</h2>
+                            <FaArrowRight/>
+                        </div>
+                        <Link to={`/game/${id}/startGame`}>
+                            <button className={cls.checkGameBtn}>Проверить</button>
+                        </Link>
+                        <button></button>
                     </div>
                 </div>
+                <br/><br/><br/>
             </div>
         </>
     );

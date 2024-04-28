@@ -1,0 +1,108 @@
+.startGameContainer {
+  height: 76vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .tabContent {
+    position: relative;
+
+    .tabs {
+      position: absolute;
+      bottom: 20px;
+      z-index: 800;
+      right: 20px;
+      display: flex;
+      align-items: center;
+
+      button {
+        background-color: #ffb700;
+        font-family: "Open sans", sans-serif;
+        width: 140px;
+        height: 40px;
+        font-size: 14px;
+        border: 1px solid #000000;
+        transition: all 400ms;
+        &:hover{
+          background-color: #ff8000;
+          cursor: pointer;
+        }
+      }
+      .btnNone {
+        display: none;
+      }
+    }
+  }
+
+  .startGameContent {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+    background-color: #1b2052;
+
+    .goBack {
+      cursor: pointer;
+      position: absolute;
+      top: -25px;
+      display: flex;
+      align-items: center;
+      margin-left: 1.5%;
+      width: 70px;
+
+      svg {
+        width: 20px;
+        color: #dddddd;
+      }
+
+      span {
+        color: #ddd;
+        font-family: "Open sans", sans-serif;
+      }
+    }
+
+    .goToGame {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      color: #000000;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffb700;
+      width: 130px;
+      height: 40px;
+      justify-content: center;
+      gap: 10px;
+      transition: all 400ms;
+
+      h2 {
+        font-family: Poppins, sans-serif;
+        font-weight: 500;
+        font-size: 17px;
+      }
+
+      &:hover {
+        background-color: #ff8000;
+        cursor: pointer;
+      }
+    }
+
+    .startGameTitles {
+      text-align: center;
+      padding-top: 10%;
+
+      h2 {
+        font-family: Nunito, sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        color: #ffffff;
+      }
+
+      p {
+        font-family: "Open sans", sans-serif;
+        font-weight: 400;
+        color: #dddddd;
+      }
+    }
+  }
+}

@@ -27,6 +27,7 @@ class GameController {
             res.status(500).json({error: "Ошибка сервера"});
         }
     }
+
 }
 
 module.exports = new GameController();

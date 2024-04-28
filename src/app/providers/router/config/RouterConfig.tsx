@@ -5,6 +5,8 @@ import AuthPage from "../../../../pages/AuthPage/ui/AuthPage";
 import LoginPage from "../../../../pages/LoginPage/ui/LoginPage";
 import ProfilePage from "../../../../pages/ProfilePage/ui/ProfilePage";
 import LevelPage from "../../../../pages/LevelPage/ui/LevelPage";
+import GameStartPage from "../../../../pages/GameStartPage/ui/GameStartPage";
+import NotFoundPage from "../../../../pages/NotFoundPage/ui/NotFoundPage";
 
 export enum AppRoutes {
     MAIN = "main",
@@ -13,6 +15,8 @@ export enum AppRoutes {
     PROFILE = "profile",
     GAME = "game",
     LEVEL = "level",
+    START_GAME = "startgame",
+    NOT_FOUND = "not_found"
 }
 
 export type AppRouteProps = RouteProps & {}
@@ -23,7 +27,9 @@ export const RoutePaths: Record<AppRoutes, string> = {
     [AppRoutes.LOG_IN]: "/log_in",
     [AppRoutes.PROFILE]:"/game/profile",
     [AppRoutes.GAME]:"/game",
-    [AppRoutes.LEVEL]:"/game/:id"
+    [AppRoutes.LEVEL]:"/game/:id",
+    [AppRoutes.START_GAME]:"game/:id/startGame",
+    [AppRoutes.NOT_FOUND]:"*"
 }
 
 
@@ -52,5 +58,13 @@ export const routerConfig: Record<AppRoutes, AppRouteProps> = {
     [AppRoutes.LEVEL]:{
         path:RoutePaths.level,
         element:<LevelPage/>
+    },
+    [AppRoutes.START_GAME]:{
+        path:RoutePaths.startgame,
+        element:<GameStartPage/>
+    },
+    [AppRoutes.NOT_FOUND]:{
+        path:RoutePaths.not_found,
+        element:<NotFoundPage/>
     }
 }

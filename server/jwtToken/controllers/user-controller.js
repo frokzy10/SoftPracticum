@@ -1,6 +1,7 @@
 const userService = require("../services/user-service");
 const {validationResult} = require("express-validator")
 const ApiError = require("../exceptions/api-error");
+const UserModel = require("../model/user-model")
 
 class UserController {
     async register(req, res, next) {
@@ -17,6 +18,7 @@ class UserController {
             next(e)
         }
     }
+
     async login(req, res, next) {
         try {
             const {email, password} = req.body;
@@ -27,6 +29,7 @@ class UserController {
             next(e);
         }
     }
+
     async logout(req, res, next) {
         try {
             const {refreshToken} = req.cookies;
@@ -37,6 +40,7 @@ class UserController {
             next(e);
         }
     }
+
     async activate(req, res, next) {
         try {
             const activationLink = req.params.link;
@@ -46,22 +50,37 @@ class UserController {
             next(error)
         }
     }
+
     async refresh(req, res, next) {
         try {
-            const { refreshToken } = req.cookies;
+            const {refreshToken} = req.cookies;
             const userData = await userService.refresh(refreshToken);
-            res.cookie('refreshToken', userData.refreshToken, { maxAge: 30 * 24 * 60 * 60 * 1000, httpOnly: true });
+            res.cookie('refreshToken', userData.refreshToken, {maxAge: 30 * 24 * 60 * 60 * 1000, httpOnly: true});
             return res.json(userData);
         } catch (e) {
             next(e);
         }
     }
+
     async getUsers(req, res, next) {
         try {
             const user = await userService.getAllUsers();
             return res.json(user)
         } catch (e) {
             next(e)
+        }
+    }
+
+
+    async updatePoints(req, res, next) {
+        try {
+            const userId = req.body.userId;
+            const pointsToAdd = req.body.pointsToAdd;
+
+            const result = await userService.updatePointsService(userId, pointsToAdd);
+            res.json(result);
+        } catch (error) {
+            next(error);
         }
     }
 }

@@ -5,49 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43adb809-11d0-424d-beb8-5ef7a4ff108a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/ProfilePage/ui/ProfilePage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/Header/DontButtonHeader/ui/DontButtonHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/ButtonsById/ui/ButtonsById.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/PaginationLevels/level2/ui/Level2.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/PaginationLevels/level2/ui/Level2.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/TabsSection/ui/TabsSections.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/GameStartPage/ui/GameStart.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/GameStartPage/ui/GameStartPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFoundPage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFoundPage/photos/404-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFoundPage/ui/NotFoundPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/Footer/ui/Footer.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/Footer/ui/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/jwtToken/controllers/game-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/controllers/game-controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/jwtToken/controllers/user-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/controllers/user-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/jwtToken/model/level-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/model/level-model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/jwtToken/model/user-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/model/user-model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/jwtToken/router/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/router/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/jwtToken/services/token-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/services/token-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/jwtToken/services/user-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/jwtToken/services/user-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers/NavigateRouter/NavigateRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/NavigateRouter/NavigateRouter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/middleware.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/persistor.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/config/storeSchema.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers/StoreProvider/ui/StoreProvider.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/providers/router/config/RouterConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/router/config/RouterConfig.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers/router/ui/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers/router/ui/AppRouter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/util/AuthUtil/AuthUtil.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/util/AuthUtil/AuthUtil.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/util/LoginUtil/LoginUtil.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/util/LoginUtil/LoginUtil.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/types/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/types/global.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Form/services/AuthServices.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Form/services/AuthServices.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/LoginForm/reducer/LoginForm.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/LoginForm/thunk/LoginFormThunks.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/LoginForm/types/LoginFormTypes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/User/reducer/UserReducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/User/types/UserTypes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/isLoggedIn/reducer/isLoggedIn.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/isLoggedIn/selectors/isLoggedInSelectors.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/isLoggedIn/types/isLoggedInTypes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/AuthFeatures/ui/AuthFeatures.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/LoginFeatures/ui/LoginFeatures.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/ButtonsById/ui/ButtonsById.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/ButtonsById/ui/ButtonsById.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/GamePage/ui/GamePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/GamePage/ui/GamePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LevelPage/ui/LevelPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LevelPage/ui/LevelPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LevelPage/ui/LevelPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LevelPage/ui/LevelPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage/ui/ProfilePage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage/ui/ProfilePage.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage/ui/ProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage/ui/ProfilePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/hooks/useAppDispatch/useAppDispatch.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widgets/Header/UserHeader/ui/CustomHeader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/UserHeader/ui/CustomHeader.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Header/ui/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/ui/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Header/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/Header/ui/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +75,7 @@
     &quot;Node.js.user-controller.js.executor&quot;: &quot;Run&quot;,
     &quot;Node.js.user-service.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;d7123743&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;9ecb71c9&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/nurdinbakytbekov/Desktop/nurdinHakaton 2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -94,6 +87,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/NotFoundPage/photos" />
+      <recent name="$PROJECT_DIR$/src/pages/NotFoundPage/ui" />
+      <recent name="$PROJECT_DIR$/src/pages/NotFoundPage" />
+      <recent name="$PROJECT_DIR$/photos" />
+      <recent name="$PROJECT_DIR$/videos/video-1" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -117,6 +119,23 @@
       <workItem from="1713857161348" duration="1531000" />
       <workItem from="1713859831668" duration="22259000" />
       <workItem from="1713947945267" duration="563000" />
+      <workItem from="1713948513753" duration="36431000" />
+      <workItem from="1714113250795" duration="4960000" />
+      <workItem from="1714132099923" duration="72000" />
+      <workItem from="1714132177356" duration="153000" />
+      <workItem from="1714132340338" duration="148000" />
+      <workItem from="1714132491322" duration="113000" />
+      <workItem from="1714132644280" duration="2966000" />
+      <workItem from="1714136985852" duration="180000" />
+      <workItem from="1714137169293" duration="95000" />
+      <workItem from="1714137321089" duration="6365000" />
+      <workItem from="1714150592839" duration="200000" />
+      <workItem from="1714150855143" duration="2038000" />
+      <workItem from="1714197764254" duration="8910000" />
+      <workItem from="1714216792587" duration="8714000" />
+      <workItem from="1714302527165" duration="1989000" />
+      <workItem from="1714306936835" duration="45000" />
+      <workItem from="1714307029651" duration="8757000" />
     </task>
     <servers />
   </component>

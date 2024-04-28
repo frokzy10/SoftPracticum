@@ -69,9 +69,19 @@ class UserService {
         return {...tokens, user: userDto}
     }
 
-    async getAllUsers(){
+    async getAllUsers() {
         const users = await UserModel.find();
         return users;
+    }
+
+    async updatePointsService(userId, pointsToAdd) {
+        const user = await UserModel.findById(userId);
+        if (!user) {
+            return ApiError.BadRequest("Ошибка при обновлении поинтов")
+        }
+        user.points += pointsToAdd;
+        await user.save();
+        return user;
     }
 }
 

@@ -13,13 +13,12 @@ const levelSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    video: {
-        type: String,
-        required: true
+    img:{
+        type:String
     },
-    output: {
-        type: String,
-        required: true
+    isWon:{
+        type:Boolean,
+        default:false
     }
 });
 

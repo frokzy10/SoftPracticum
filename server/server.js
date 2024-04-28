@@ -12,7 +12,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended: true}));
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:9000",
+    origin: "http://localhost:3000",
 }));
 
 app.use('/api', router);
@@ -22,8 +22,9 @@ const start = async () => {
     try {
         await mongoose.connect(process.env.DB_URL);
         console.log("MongoDB is connected");
-
-        app.listen(8000, () => console.log(`Server started on PORT = ${8000}`))
+        app.listen(8000,()=>{
+            console.log(`app listen on port ${8000}`)
+        })
     } catch (e) {
         console.log(e);
     }

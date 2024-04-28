@@ -3,22 +3,21 @@ import {observer} from "mobx-react-lite";
 import axios from "axios";
 import ButtonsById from "../../../features/ButtonsById/ui/ButtonsById";
 import LoginPage from "../../LoginPage/ui/LoginPage";
-import {store, STORECONTEXT} from "../../../index";
-import {Link, useParams} from "react-router-dom";
-
+import {STORECONTEXT} from "../../../index";
 
 interface IGameSchema {
     _id: string,
     title: string,
     description: string,
-    video: string,
-    output: string
+    img:string,
+    isWon:boolean,
+    points:number
 }
 
 const GamePage: FC = () => {
     const {store} = useContext(STORECONTEXT);
-    const {id} = useParams()
     const [games, setGames] = useState<IGameSchema[]>([]);
+    const [loading, setLoading] = useState<boolean>(true)
 
     useEffect(() => {
         const fetchGames = async () => {
@@ -27,24 +26,24 @@ const GamePage: FC = () => {
                 setGames(response.data);
             } catch (error) {
                 console.error('Error fetching games:', error);
+            } finally {
+                setLoading(false);
             }
         };
         fetchGames();
     }, []);
-    if (!store.isAuth) {
-        return <LoginPage/>
-    }
 
+    if(!store.isAuth){
+        return (
+            <>
+                <LoginPage/>
+            </>
+        )
+    }
     return (
-        <ul>
-            {games.map((game, index) => (
-                <li key={index}>
-                    <Link to={`/game/${game._id}`}>
-                        <button>{game.title}</button>
-                    </Link>
-                </li>
-            ))}
-        </ul>
+        <>
+            <ButtonsById games={games} loading={loading}/>
+        </>
     )
 };
 
