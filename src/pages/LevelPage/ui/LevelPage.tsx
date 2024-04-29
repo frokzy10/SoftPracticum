@@ -32,11 +32,6 @@ const LevelPage: FC = () => {
         navigate(-1);
     };
 
-    const updatePoint = 10;
-
-    const handleUpdatePoint = () => {
-
-    }
 
     useEffect(() => {
         const fetchGameById = async () => {
@@ -52,13 +47,11 @@ const LevelPage: FC = () => {
         fetchGameById();
     }, [id, location.pathname]);
 
-    if(!store.isAuth){
-        return (
-            <>
-                <LoginPage/>
-                <Spinner/>
-            </>
-        )
+    if (store.isLoading) {
+        return <Spinner/>
+    }
+    if (!store.isAuth) {
+        return <LoginPage/>
     }
 
     return (

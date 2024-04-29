@@ -9,13 +9,11 @@ const ProfilePage: FC = () => {
     const {store} = useContext(STORECONTEXT);
 
 
+    if (store.isLoading) {
+        return <Spinner/>
+    }
     if (!store.isAuth) {
-        return (
-            <>
-                <LoginPage/>
-                <Spinner/>
-            </>
-        )
+        return <LoginPage/>
     }
 
     return (

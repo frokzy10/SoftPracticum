@@ -53,6 +53,7 @@ export default class Store {
     }
 
     async register(email: string, password: string, navigate: NavigateFunction) {
+        this.setLoading(false)
         try {
             const res = await AuthServices.register(email, password);
             if (res.status === 200) {
@@ -61,19 +62,20 @@ export default class Store {
             localStorage.setItem("token", res.data.accessToken);
             this.setAuth(true);
             this.setUser(res.data.user);
+            this.setLoading(true)
         } catch (e: any) {
             console.log(e.response?.data?.message);
         }
     }
 
     async checkAuth() {
+        this.setLoading(true)
         try {
             const response = await axios.get<AuthResponse>(`http://localhost:8000/api/refresh`, {withCredentials: true});
             console.log(response);
             localStorage.setItem("token", response.data.accessToken);
             this.setAuth(true);
             this.setUser(response.data.user);
-            this.setLoading(true);
         } catch (e: any) {
             console.log(e);
         } finally {

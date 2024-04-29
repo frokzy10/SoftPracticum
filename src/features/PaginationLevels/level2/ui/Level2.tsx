@@ -7,6 +7,8 @@ import {jwtDecode} from "jwt-decode";
 import AuthServices from "../../../../entities/Form/services/AuthServices";
 import UserService from "../../../../entities/Form/services/UserService";
 import {IUser} from "../../../../entities/Form";
+import Spinner from "../../../../shared/spinner/Spinner";
+import LoginPage from "../../../../pages/LoginPage/ui/LoginPage";
 
 interface Props {
     modal: boolean,
@@ -27,6 +29,13 @@ const Level2 = (props: Props) => {
     const { store } = useContext(STORECONTEXT);
     const points = 10;
     const [getUser,setGetUser] = useState<IUser[]>([])
+
+    if (store.isLoading) {
+        return <Spinner/>
+    }
+    if (!store.isAuth) {
+        return <LoginPage/>
+    }
 
     const handleBtn = async () => {
         try {

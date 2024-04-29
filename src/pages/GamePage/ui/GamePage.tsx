@@ -4,14 +4,15 @@ import axios from "axios";
 import ButtonsById from "../../../features/ButtonsById/ui/ButtonsById";
 import LoginPage from "../../LoginPage/ui/LoginPage";
 import {STORECONTEXT} from "../../../index";
+import Spinner from "../../../shared/spinner/Spinner";
 
 interface IGameSchema {
     _id: string,
     title: string,
     description: string,
-    img:string,
-    isWon:boolean,
-    points:number
+    img: string,
+    isWon: boolean,
+    points: number
 }
 
 const GamePage: FC = () => {
@@ -33,12 +34,11 @@ const GamePage: FC = () => {
         fetchGames();
     }, []);
 
-    if(!store.isAuth){
-        return (
-            <>
-                <LoginPage/>
-            </>
-        )
+    if (store.isLoading) {
+        return <Spinner/>
+    }
+    if (!store.isAuth) {
+        return <LoginPage/>
     }
     return (
         <>

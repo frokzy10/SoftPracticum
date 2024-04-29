@@ -3,10 +3,10 @@ import axios from "axios";
 import {useNavigate, useParams} from "react-router-dom";
 import {observer} from "mobx-react-lite";
 import {STORECONTEXT} from "../../../index";
-import LoginPage from "../../LoginPage/ui/LoginPage";
 import cls from "./GameStart.module.scss"
 import {IoMdArrowBack} from "react-icons/io";
 import Level2 from "../../../features/PaginationLevels/level2/ui/Level2";
+import Spinner from "../../../shared/spinner/Spinner";
 
 interface IStartGame {
     _id: string,
@@ -25,7 +25,6 @@ const GameStartPage = () => {
     const navigate = useNavigate();
     const [startGame, setStartGame] = useState<IStartGame | null>(null)
     const [tab, setTab] = useState("start"); // состояние текущей вкладки
-
     const [modal,setModal] = useState<boolean>(false);
 
     useEffect(() => {
@@ -40,27 +39,27 @@ const GameStartPage = () => {
         fetchGameById();
     }, [id]);
 
+    useEffect(() => {
+        if (!store.isAuth) {
+            return; // Вы можете вернуть что-то другое здесь вместо навигации, например, сообщение или компонент
+        }
+    }, [store.isAuth]);
+
     const handleBack = () => {
         navigate(-1)
     }
-
     const handleTabChange = (selectedTab: string) => {
         setTab(selectedTab);
     };
-
-    if (!store.isAuth) {
-        return (
-            <>
-                <LoginPage/>
-            </>
-        )
-    }
 
     const handleOpenModal = () => {
         setModal(true);
     }
     const handleCloseModal = () => {
         setModal(false)
+    }
+    if (store.isLoading) {
+        return <Spinner/>
     }
     return (
         <div className={cls.startGameContainer}>
