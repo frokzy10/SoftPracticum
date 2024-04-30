@@ -1,4 +1,4 @@
-import React, {FC, useContext} from 'react';
+import React, {FC, useContext, useEffect} from 'react';
 import {STORECONTEXT} from "../../../index";
 import LoginPage from "../../LoginPage/ui/LoginPage";
 import {observer} from "mobx-react-lite";
@@ -8,6 +8,8 @@ import Spinner from "../../../shared/spinner/Spinner";
 const ProfilePage: FC = () => {
     const {store} = useContext(STORECONTEXT);
 
+    console.log(store.user.points)
+
 
     if (store.isLoading) {
         return <Spinner/>
@@ -15,7 +17,6 @@ const ProfilePage: FC = () => {
     if (!store.isAuth) {
         return <LoginPage/>
     }
-
     return (
         <>
             <div className={cls.profileAll}>
@@ -25,6 +26,7 @@ const ProfilePage: FC = () => {
                         <div className={cls.headerRightSide}>
                             <h2 className={cls.profileEmail}>{store.isAuth ? `Почта: ${store.user.email}` : 'Почта: Авторизуйтесь'}</h2>
                             <h2 className={cls.profileStatus}>{store.user.isActivated ? 'Статус: Аккаунт подтвержен' : "Статус: Подтвердите аккаунт"}</h2>
+                            <div className={cls.profilePoints}>Очки: {!store.user.points ? "0" : store.user.points}  </div>
                         </div>
                     </div>
                     <div className={cls.profileBtnContainer}>

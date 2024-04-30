@@ -1,29 +1,35 @@
 import {IUser} from "../../../../entities/Form";
-import {makeAutoObservable} from "mobx";
+import {action, makeAutoObservable} from "mobx";
 import AuthServices from "../../../../entities/Form/services/AuthServices";
 import axios from "axios";
-import {AuthResponse} from "../../../../entities/Form/models/AuthResponse";
 import {NavigateFunction} from "react-router-dom";
+import {AuthResponse} from "../../../../entities/Form/models/AuthResponse";
+
 
 export default class Store {
     user = {} as IUser;
     isAuth = false;
     isLoading = false;
-
     constructor() {
         makeAutoObservable(this)
     }
 
-    setAuth(bool: boolean) {
+    @action setAuth(bool: boolean) {
         this.isAuth = bool;
     }
 
-    setUser(user: IUser) {
+    @action setUser(user: IUser) {
         this.user = user;
     }
 
-    setLoading(bool: boolean) {
+    @action setLoading(bool: boolean) {
         this.isLoading = bool
+    }
+    @action clearUserStore(){
+        this.user.email = "";
+        this.user.points = 0;
+        this.user.isActivated = false;
+        this.user.id = ""
     }
 
     async login(email: string, password: string, navigate: NavigateFunction) {
@@ -40,13 +46,14 @@ export default class Store {
         }
     }
 
-    async logout() {
+    @action async logout() {
         try {
             const response = await AuthServices.logout();
             console.log(response)
             localStorage.removeItem("token");
             this.setUser({} as IUser);
             this.setAuth(false);
+            this.clearUserStore();
         } catch (e: any) {
             console.log(e.response?.data?.message)
         }
@@ -82,14 +89,24 @@ export default class Store {
             this.setLoading(false);
         }
     }
-    // async UpdatePointInFrontend(point:number){
-    //     try {
-    //         const response = await AuthServices.points(point);
-    //         console.log(response);
-    //         this.setAuth(true);
-    //         this.setUser(response.data.user);
-    //     }catch (e){
-    //         console.log(e)
-    //     }
-    // }
+
+    async UpdatePointInFrontend(userId:any,token:any){
+        try {
+            const response = await axios.post("http://localhost:8000/api/points",{
+                    userId: userId,
+                },
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+            console.log(response.data);
+            const updatedUser = { ...this.user, points: response.data.points };
+            console.log(updatedUser)
+            this.setUser(updatedUser);
+            this.setAuth(true);
+        }catch (e){
+            console.log(e)
+        }
+    }
 }

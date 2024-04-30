@@ -15,7 +15,7 @@ export default class AuthServices {
     static async logout(): Promise<void> {
         return API_URL.post('/logout')
     }
-    static points(userId:any,pointsToAdd:number,headers:any):Promise<AxiosResponse<AuthResponse>>{
-        return API_URL.post('/points',{userId,pointsToAdd},{headers})
+    static points(userId:any,headers:any):Promise<AxiosResponse<AuthResponse>>{
+        return API_URL.post('/points',{userId},{headers})
     }
 }

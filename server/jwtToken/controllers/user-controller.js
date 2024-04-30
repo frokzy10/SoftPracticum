@@ -1,7 +1,6 @@
 const userService = require("../services/user-service");
 const {validationResult} = require("express-validator")
 const ApiError = require("../exceptions/api-error");
-const UserModel = require("../model/user-model")
 
 class UserController {
     async register(req, res, next) {
@@ -74,15 +73,18 @@ class UserController {
 
     async updatePoints(req, res, next) {
         try {
-            const userId = req.body.userId;
-            const pointsToAdd = req.body.pointsToAdd;
+            const userId = req.params.id;
+            const result = await userService.updatePointsService(userId);
 
-            const result = await userService.updatePointsService(userId, pointsToAdd);
-            res.json(result);
+            if (result.nModified === 0) {
+                return res.status(404).json({ error: "Пользователь не найден" });
+            }
+            return res.status(200).json(result);
         } catch (error) {
             next(error);
         }
     }
+
 }
 
 module.exports = new UserController()

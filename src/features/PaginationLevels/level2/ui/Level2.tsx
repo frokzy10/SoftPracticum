@@ -1,14 +1,15 @@
 import React, {useContext, useEffect, useState} from 'react';
 import cls from "./Level2.module.scss";
-import { IoMdClose } from "react-icons/io";
-import { STORECONTEXT } from "../../../../index";
-import axios from "axios";
+import {IoMdClose} from "react-icons/io";
+import {STORECONTEXT} from "../../../../index";
 import {jwtDecode} from "jwt-decode";
 import AuthServices from "../../../../entities/Form/services/AuthServices";
 import UserService from "../../../../entities/Form/services/UserService";
 import {IUser} from "../../../../entities/Form";
 import Spinner from "../../../../shared/spinner/Spinner";
 import LoginPage from "../../../../pages/LoginPage/ui/LoginPage";
+import axios from "axios";
+
 
 interface Props {
     modal: boolean,
@@ -19,16 +20,15 @@ interface IGameSchema {
     _id: string,
     title: string,
     description: string,
-    img:string,
-    isWon:boolean,
-    points:number
+    img: string,
+    isWon: boolean,
+    points: number
 }
 
 const Level2 = (props: Props) => {
-    const { modal, handleCloseModal } = props;
-    const { store } = useContext(STORECONTEXT);
-    const points = 10;
-    const [getUser,setGetUser] = useState<IUser[]>([])
+    const {modal, handleCloseModal} = props;
+    const {store} = useContext(STORECONTEXT);
+    const [getUser, setGetUser] = useState<IUser[]>([])
 
     if (store.isLoading) {
         return <Spinner/>
@@ -43,32 +43,24 @@ const Level2 = (props: Props) => {
             let userId = null;
             if (token) {
                 userId = jwtDecode(token);
-                console.log(userId);
             } else {
                 console.error('Token is null or undefined');
             }
             if (userId) {
-                const response = await AuthServices.points(userId.sub, points, {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                });
-
-                console.log(response.data);
+                const response = await store.UpdatePointInFrontend(userId,token)
             } else {
                 console.error('UserId is null or undefined');
             }
-        } catch (error) {
-            console.error('Error updating points:');
+        } catch (error: any) {
+            console.error('Error updating points:', error.response.data);
         }
-
     };
 
-    const userGet = async ()=>{
+    const userGet = async () => {
         try {
             const res = await UserService.fetchUsers();
             setGetUser(res.data)
-        }catch (e){
+        } catch (e) {
             console.log(e)
         }
     }
@@ -76,7 +68,7 @@ const Level2 = (props: Props) => {
     return (
         <div className={cls.level2Container}>
             <button onClick={userGet}>Get</button>
-            {getUser.map(g=>(
+            {getUser.map(g => (
                 <div key={g.email}>{g.email}</div>
             ))}
             {modal && (

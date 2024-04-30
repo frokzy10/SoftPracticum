@@ -74,14 +74,19 @@ class UserService {
         return users;
     }
 
-    async updatePointsService(userId, pointsToAdd) {
-        const user = await UserModel.findById(userId);
-        if (!user) {
-            return ApiError.BadRequest("Ошибка при обновлении поинтов")
+    async updatePointsService(userId) {
+        try {
+            const result = await UserModel.findOneAndUpdate(
+                { userId: userId },
+                { $inc: { points: 10 } },
+            );
+            if (result.nModified === 0) {
+                return ApiError.BadRequest("Ошибка")
+            }
+            return result;
+        } catch (error) {
+            throw new Error("Ошибка при начислении баллов: " + error.message);
         }
-        user.points += pointsToAdd;
-        await user.save();
-        return user;
     }
 }
 
