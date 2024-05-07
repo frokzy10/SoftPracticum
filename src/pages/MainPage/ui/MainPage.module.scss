@@ -17,4 +17,75 @@
       font-size: 25px;
     }
   }
+  .mainBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 37px;
+    width: 120px;
+    font-family: Nunito,sans-serif;
+    font-weight: 500;
+    border: none;
+    background-color: #ff8000;
+    transition: all 400ms;
+    &:hover{
+      background-color: #ffb700;
+      cursor: pointer;
+    }
+  }
+}
+
+.AboutUs {
+  padding: 2%;
+  .AboutUsContainer {
+    margin-top: 5%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 860px) {
+      display: block;
+    }
+    .nolikImg {
+      height: 500px;
+      width: 400px;
+      z-index: 0;
+      @media (max-width: 490px) {
+        width: 340px;
+        height: 400px;
+      }
+    }
+
+    h2 {
+      color: #ffffff;
+      font-size: 25px;
+      font-family: Poppins, sans-serif;
+    }
+
+    p {
+      font-family: Nunito, sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: #dddddd;
+      @media (max-width: 490px) {
+        font-size: 17px;
+      }
+    }
+  }
+}
+.contacts{
+  padding: 2% 7%;
+  .contancTitle{
+    font-family: Nunito,sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  p{
+    font-family: "Open sans",sans-serif;
+    font-weight: 400;
+    color: #dddddd;
+    font-size: 18px;
+  }
 }

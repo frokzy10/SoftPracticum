@@ -3,4 +3,5 @@ export interface IUser{
     isActivated:boolean,
     id:string,
     points:any
+    status:string
 }

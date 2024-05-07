@@ -13,6 +13,7 @@
   }
 
   .sidebar {
+    border-radius: 8px;
     color: #ffffff;
     padding: 1%;
     background-color: #111538;
@@ -53,6 +54,13 @@
     width: 60%;
     height: 70vh;
     padding: 3% 5% 3% 11%;
+    border-radius: 8px;
+    overflow: scroll;
+    overflow-x:hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     @media (max-width: 800px) {
       width: 80%;
     }

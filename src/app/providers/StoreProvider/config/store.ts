@@ -17,7 +17,6 @@ export default class Store {
     @action setAuth(bool: boolean) {
         this.isAuth = bool;
     }
-
     @action setUser(user: IUser) {
         this.user = user;
     }
@@ -84,7 +83,6 @@ export default class Store {
             this.setAuth(true);
             this.setUser(response.data.user);
         } catch (e: any) {
-            console.log(e);
         } finally {
             this.setLoading(false);
         }
@@ -92,8 +90,8 @@ export default class Store {
 
     async UpdatePointInFrontend(userId:any,token:any){
         try {
-            const response = await axios.post("http://localhost:8000/api/points",{
-                    userId: userId,
+            const response = await axios.patch("http://localhost:8000/api/points",{
+                    _id: userId,
                 },
                 {
                     headers: {
@@ -101,7 +99,7 @@ export default class Store {
                     }
                 });
             console.log(response.data);
-            const updatedUser = { ...this.user, points: response.data.points };
+            const updatedUser = { ...this.user, status:response.data.status, points: response.data.points };
             console.log(updatedUser)
             this.setUser(updatedUser);
             this.setAuth(true);
@@ -109,4 +107,5 @@ export default class Store {
             console.log(e)
         }
     }
+
 }

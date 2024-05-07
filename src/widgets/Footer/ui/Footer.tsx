@@ -9,7 +9,9 @@ const Footer = () => {
                 <Link to="/">
                     <p className={cls.gameLogo}>GameLogo</p>
                 </Link>
-
+                <Link to="/game/profile">
+                    <button>Профиль</button>
+                </Link>
             </div>
         </footer>
     );

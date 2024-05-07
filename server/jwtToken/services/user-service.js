@@ -5,6 +5,7 @@ const UserDto = require("../dtos/user-dtos");
 const uuid = require("uuid");
 const mailService = require("./mail-service");
 const ApiError = require("../exceptions/api-error")
+const userEvent = require("@testing-library/user-event");
 
 class UserService {
     async registration(email, password) {
@@ -77,12 +78,15 @@ class UserService {
     async updatePointsService(userId) {
         try {
             const result = await UserModel.findOneAndUpdate(
-                { userId: userId },
-                { $inc: { points: 10 } },
+                {userId: userId},
+                {$inc: {points: 10},$set:{status:"Новичок в IT"}},
+                {new: true}
             );
-            if (result.nModified === 0) {
-                return ApiError.BadRequest("Ошибка")
+
+            if (!result) {
+                return ApiError.BadRequest("Пользователь не найден");
             }
+
             return result;
         } catch (error) {
             throw new Error("Ошибка при начислении баллов: " + error.message);

@@ -24,7 +24,7 @@ const start = async () => {
         console.log("MongoDB is connected");
         app.listen(8000,()=>{
             console.log(`app listen on port ${8000}`)
-        })
+        });
     } catch (e) {
         console.log(e);
     }

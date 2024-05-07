@@ -14,10 +14,6 @@ const App: FC = () => {
     const location = useLocation();
 
     useEffect(() => {
-        console.log(store.user.points)
-    }, []);
-
-    useEffect(() => {
         if (localStorage.getItem("token")) {
             store.checkAuth();
         }

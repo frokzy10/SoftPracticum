@@ -17,11 +17,14 @@ interface IGameSchema {
     win: boolean,
     condition: string,
     conditionName: string,
-    conditionImg:string
+    conditionImg: string
+    conditionVideo: string,
+    responseMeasure: string,
+    realAnswer: string;
 }
 
 const LevelPage: FC = () => {
-    const {id,gameName} = useParams();
+    const {id} = useParams();
     const [game, setGame] = useState<IGameSchema | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const navigate = useNavigate();
@@ -31,7 +34,6 @@ const LevelPage: FC = () => {
     const handleBack = () => {
         navigate(-1);
     };
-
 
     useEffect(() => {
         const fetchGameById = async () => {
@@ -65,8 +67,12 @@ const LevelPage: FC = () => {
                     <><Spinner/></>
                 ) : game ? (
                     <div className={cls.levelHeader}>
-                        <img src={game.img}
-                             alt="img"/>
+                        <iframe width="760" height="415"
+                                src={game.conditionVideo}
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                        >
+                        </iframe>
                         <div className={cls.levelRightSide}>
                             <h2 style={{color: "white"}}>{game.title}</h2>
                             <p style={{color: "white"}}>{game.description}</p>
@@ -83,9 +89,8 @@ const LevelPage: FC = () => {
                             <FaArrowRight/>
                         </div>
                         <Link to={`/game/${id}/startGame`}>
-                            <button className={cls.checkGameBtn}>Проверить</button>
+                            <button className={cls.checkGameBtn}>Перейти</button>
                         </Link>
-                        <button></button>
                     </div>
                 </div>
                 <br/><br/><br/>

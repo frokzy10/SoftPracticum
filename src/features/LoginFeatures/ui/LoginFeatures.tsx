@@ -2,11 +2,9 @@ import {useNavigate} from "react-router-dom";
 import cls from "./LoginFeatures.module.scss";
 import {ChangeEvent, useContext, useState} from "react";
 import LoginDetails from "../../../widgets/LoginDetails/LoginDetails";
-import {LoginUtil} from "../../../app/util/LoginUtil/LoginUtil";
-import {STORECONTEXT} from "../../../index";
 import {observer} from "mobx-react-lite";
-
-
+import {STORECONTEXT} from "../../../index";
+import {LoginUtil} from "../../../app/util/LoginUtil/LoginUtil";
 
 const LoginFeatures = () => {
     const navigate = useNavigate();
@@ -39,5 +37,4 @@ const LoginFeatures = () => {
         </div>
     );
 };
-
 export default observer(LoginFeatures);

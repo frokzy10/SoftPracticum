@@ -25,7 +25,6 @@ const DontButtonHeader = () => {
                     <ul>
                         <li>О нас</li>
                         <li>Контакты</li>
-                        <li>Нурдин</li>
                     </ul>
                 </nav>
                 <button className={cls.burgerMenu} onClick={toggleMenu}>
@@ -38,7 +37,6 @@ const DontButtonHeader = () => {
                         <ul>
                             <li>О нас</li>
                             <li>Контакты</li>
-                            <li>Нурдин</li>
                         </ul>
                         <div className={cls.burgerClose} onClick={closeMenu}>
                             <div className={cls.closeModal}>

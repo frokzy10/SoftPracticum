@@ -24,9 +24,10 @@ const Header = () => {
                 </Link>
                 <nav className={!isOpen ? cls.hide : ''}>
                     <ul>
-                        <li>О нас</li>
-                        <li>Контакты</li>
-                        <li>Нурдин</li>
+                        <li><a href="#about-section">О нас</a></li>
+                        <li>
+                            <a href="#contacts-section">Контакты</a>
+                        </li>
                     </ul>
                     {store.isAuth ? (
                         <Link to="/game">
@@ -50,14 +51,15 @@ const Header = () => {
                 <div className={cls.navContainer}>
                     <nav>
                         <ul>
-                            <li>О нас</li>
-                            <li>Контакты</li>
-                            <li>Нурдин</li>
+                            <li><a href="#about-section">О нас</a></li>
+                            <li>
+                                <a href="#contacts-section">Контакты</a>
+                            </li>
                         </ul>
                         {store.isAuth ? (
                             <Link to="/game">
                                 <button className={cls.headerButton}>
-                                    Войти
+                                Войти
                                 </button>
                             </Link>
                         ) : (
@@ -79,5 +81,4 @@ const Header = () => {
         </header>
     );
 };
-
 export default Header;

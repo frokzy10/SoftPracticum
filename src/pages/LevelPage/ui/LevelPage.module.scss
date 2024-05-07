@@ -21,13 +21,17 @@
   .levelHeader {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    gap: 50px;
     margin-top: 2%;
+    @media(max-width:830px){
+      flex-direction: column;
+    }
 
-    img {
-      width: 40%;
-      object-fit: cover;
-      height: 300px;
+    iframe{
+      border: none;
+      @media(max-width:830px){
+        width: 100%;
+      }
     }
 
     .levelRightSide {
@@ -42,6 +46,11 @@
         font-weight: 400;
         color: #dddddd;
         font-size: 18px;
+        width: 400px;
+        @media(max-width:830px){
+          width: 100%;
+          margin-bottom: 3%;
+        }
       }
     }
   }

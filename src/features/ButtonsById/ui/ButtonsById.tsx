@@ -33,7 +33,7 @@ const ButtonsById = (props: TProps) => {
                             <div className={cls.sidebarContent}>
                                 <h2 className={cls.sidebarTitles}>Уровни</h2>
                                 {games.map((game: IGameSchema, index: number) => (
-                                    <div className={cls.sideBarSuccessLevel}>
+                                    <div key={game._id} className={cls.sideBarSuccessLevel}>
                                         <div className={cls.sideBarSuccessLevelTitle}>Пройдите игру {game.title}</div>
                                         <IoMdClose/>
                                     </div>

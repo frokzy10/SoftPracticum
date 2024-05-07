@@ -11,9 +11,12 @@ const CustomHeader = () => {
                 </Link>
                 <nav>
                     <ul>
-                        <li>О нас</li>
-                        <li>Контакты</li>
-                        <li>Нурдин</li>
+                        <Link to="/">
+                            <li>О нас</li>
+                        </Link>
+                        <Link to="/">
+                            <li>Контакты</li>
+                        </Link>
                     </ul>
                 </nav>
                 <Link to="/game/profile">
