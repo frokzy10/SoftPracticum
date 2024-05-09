@@ -20,7 +20,11 @@ interface IGameSchema {
     conditionImg: string
     conditionVideo: string,
     responseMeasure: string,
-    realAnswer: string;
+    realAnswer: string,
+    isLevel1:boolean,
+    isLevel2:boolean,
+    isLevel3:boolean,
+    isLevel4:boolean
 }
 
 const LevelPage: FC = () => {

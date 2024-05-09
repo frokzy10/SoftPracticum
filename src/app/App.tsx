@@ -19,6 +19,14 @@ const App: FC = () => {
         }
     }, [store]);
 
+    if(location.pathname === "/game/success") {
+        return <div className="AppContainer">
+            <DontButtonHeader/>
+            <div className="content">
+                <AppRouter/>
+            </div>
+        </div>
+    }
     if (location.pathname === "/game") {
         return (
             <>

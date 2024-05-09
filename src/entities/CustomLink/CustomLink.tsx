@@ -1,12 +1,13 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 
 interface CustomLinkProps {
     href: string;
     children: React.ReactNode;
-    onLinkClick?: () => void;
 }
 
-const CustomLink: React.FC<CustomLinkProps> = ({href, children, onLinkClick}) => {
+const CustomLink: React.FC<CustomLinkProps> = ({href, children}) => {
+    const navigate = useNavigate()
     const handleLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
 
@@ -14,8 +15,8 @@ const CustomLink: React.FC<CustomLinkProps> = ({href, children, onLinkClick}) =>
 
         console.log("Пользователь перешел по ссылке!", url);
 
-        if (onLinkClick) {
-            onLinkClick();
+        if(url){
+            navigate("/game/success")
         }
         window.open(href, '_blank');
     };

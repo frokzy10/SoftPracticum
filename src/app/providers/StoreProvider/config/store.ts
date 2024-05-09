@@ -10,10 +10,13 @@ export default class Store {
     user = {} as IUser;
     isAuth = false;
     isLoading = false;
+    isWon = false
     constructor() {
         makeAutoObservable(this)
     }
-
+    @action setWon(bool:boolean){
+        this.isWon = bool
+    }
     @action setAuth(bool: boolean) {
         this.isAuth = bool;
     }
@@ -98,10 +101,10 @@ export default class Store {
                         Authorization: `Bearer ${token}`
                     }
                 });
-            console.log(response.data);
             const updatedUser = { ...this.user, status:response.data.status, points: response.data.points };
             console.log(updatedUser)
             this.setUser(updatedUser);
+            this.setWon(true);
             this.setAuth(true);
         }catch (e){
             console.log(e)

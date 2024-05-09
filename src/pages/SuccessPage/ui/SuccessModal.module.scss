@@ -1,0 +1,101 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  z-index: 2001;
+  margin: 0 auto;
+
+  .goBack {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 1.5%;
+    width: 70px;
+
+    svg {
+      width: 20px;
+      color: #dddddd;
+    }
+
+    span {
+      color: #ddd;
+      font-family: "Open sans", sans-serif;
+    }
+  }
+
+  .modalContent {
+    background-color: #ff8000;
+    max-width: 500px;
+    color: #ffffff;
+    height: 500px;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modalCon {
+      text-align: center;
+      h2 {
+        font-family: Nunito, sans-serif;
+        color: #ffffff;
+        font-size: 24px;
+      }
+      div{
+        color: #fff;
+        font-family: Poppins,sans-serif;
+      }
+      button{
+        background-color: #337AB7;
+        border: none;
+        width: 140px;
+        font-family: Poppins,sans-serif;
+        height: 37px;
+        color: #ffffff;
+        transition: all 400ms;
+        &:hover{
+          background-color: #6ebeff;
+          color: #000000;
+          cursor: pointer;
+        }
+      }
+      .goBack {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-left: 1.5%;
+        width: 70px;
+
+        svg {
+          width: 20px;
+          color: #dddddd;
+        }
+
+        span {
+          color: #ddd;
+          font-family: "Open sans", sans-serif;
+        }
+      }
+    }
+
+    .modalClose {
+      font-size: 25px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all 400ms;
+
+      &:hover {
+        color: #dddddd;
+        cursor: pointer;
+      }
+    }
+  }
+}

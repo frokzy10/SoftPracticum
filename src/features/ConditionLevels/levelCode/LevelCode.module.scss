@@ -1,0 +1,181 @@
+.heroImg {
+  position: absolute;
+  left: -300px;
+
+  img {
+    width: 400px;
+    height: 450px;
+  }
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.level2Content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  .level2Title {
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    font-family: Nunito, sans-serif;
+    z-index: 100;
+  }
+
+  .errorAns {
+    color: red;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    padding-top: 2%;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .levelInputContainer {
+    margin-top: 2%;
+    text-align: center;
+    gap: 10px;
+
+    .levelInputSubtitle{
+      color: #ddd;
+      font-family: Poppins,sans-serif;
+      font-size: 18px;
+    }
+    div{
+      .levelLink{
+        color:#ffb700;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.level2{
+  display: grid;
+  height:100%;
+  align-items: center;
+  div{
+    h2{
+      color: #ffffff;
+      font-family: "Open sans",sans-serif;
+      font-weight: 500;
+    }
+    label{
+      margin-top: 3.5%;
+      color: #ddd;
+      font-family: Poppins,sans-serif;
+    }
+    input{
+      width: 100%;
+      height: 37px;
+      padding: 2%;
+      font-family: Nunito,sans-serif;
+      outline: none;
+      transition: all 400ms;
+      border: none;
+      margin: 2% 0;
+      &:focus{
+        background-color: #020b18;
+        color: #ffffff;
+      }
+    }
+    .linkToSphere{
+      color: #ffb700;
+      font-family: Nunito,sans-serif;
+      transition: all 350ms;
+      text-decoration: underline;
+      &:hover{
+        color: #ff8000;
+      }
+    }
+    .planBtn{
+      width: 130px;
+      height: 37px;
+      background-color: #ffb700;
+      border: none;
+      margin-top: 2%;
+      font-family: Nunito,sans-serif;
+      font-size: 14px;
+      transition: all 400ms;
+      &:hover{
+        background-color: #ff8000;
+        cursor: pointer;
+      }
+    }
+    .overlay{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%,-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1005;
+    }
+    ///////MODAL
+    .level2Modal{
+      position: fixed;
+      z-index: 2007;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: #1b2052;
+
+      .level2ModalContainer{
+        overflow-y: scroll;
+        width: 70vw;
+        height: 60vh;
+        padding: 2%;
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #9a0000;
+          border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+          border-radius: 5px;
+        }
+        .level2PlanIndex{
+          padding: 2px;
+          text-align: center;
+          color: #ffffff;
+          font-family: Nunito,sans-serif;
+          font-size: 30px;
+        }
+        .pointsTitle{
+          padding-left: 2%;
+          color: #ff7300;
+          font-weight: 600;
+          font-family: Poppins,sans-serif;
+        }
+        .planBtn{
+          margin-left: 2%;
+          width: 120px;
+          height: 37px;
+          background-color: #ff8000;
+          border: none;
+          font-family: Nunito,sans-serif;
+
+        }
+        svg{
+          position: absolute;
+          top: 0;
+          right: 10px;
+          color: #ffffff;
+          font-size: 29px;
+          transition: all 400ms;
+          &:hover{
+            color: #dddddd;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

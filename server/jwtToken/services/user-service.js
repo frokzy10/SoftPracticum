@@ -5,7 +5,6 @@ const UserDto = require("../dtos/user-dtos");
 const uuid = require("uuid");
 const mailService = require("./mail-service");
 const ApiError = require("../exceptions/api-error")
-const userEvent = require("@testing-library/user-event");
 
 class UserService {
     async registration(email, password) {

@@ -27,7 +27,12 @@ const levelSchema = new mongoose.Schema({
     task:{type:String},
     responseMeasure:{type:String},
     realAnswer:{type:String},
-    conditionLink:{type:String}
+    conditionLink:{type:String},
+    sphere:{type:Array},
+    isLevel1:{type:Boolean},
+    isLevel2:{type:Boolean},
+    isLevel3:{type:Boolean},
+    isLevel4:{type:Boolean},
 });
 
 const Game = mongoose.model('Game', levelSchema);

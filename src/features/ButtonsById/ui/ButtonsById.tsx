@@ -9,8 +9,18 @@ interface IGameSchema {
     _id: string,
     title: string,
     description: string,
-    img:string,
-    isWon:boolean
+    img: string,
+    win: boolean,
+    condition: string,
+    conditionName: string,
+    conditionImg: string
+    conditionVideo: string,
+    responseMeasure: string,
+    realAnswer: string,
+    isLevel1:boolean,
+    isLevel2:boolean,
+    isLevel3:boolean,
+    isLevel4:boolean
 }
 
 interface TProps {
@@ -32,7 +42,7 @@ const ButtonsById = (props: TProps) => {
                         <aside className={cls.sidebar}>
                             <div className={cls.sidebarContent}>
                                 <h2 className={cls.sidebarTitles}>Уровни</h2>
-                                {games.map((game: IGameSchema, index: number) => (
+                                {games.map((game: IGameSchema) => (
                                     <div key={game._id} className={cls.sideBarSuccessLevel}>
                                         <div className={cls.sideBarSuccessLevelTitle}>Пройдите игру {game.title}</div>
                                         <IoMdClose/>
@@ -46,12 +56,12 @@ const ButtonsById = (props: TProps) => {
                             {games.map((game: IGameSchema) => (
                                 <li key={game._id} className={cls[`button${game._id}`]}>
                                     <Link to={`/game/${game._id}`}>
+                                        {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
                                         <button className={cls.button19} role="button">{game.title}</button>
                                     </Link>
                                 </li>
                             ))}
                         </ul>
-
                     </div>
                 </>
             )
