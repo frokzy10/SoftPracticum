@@ -2,12 +2,12 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 1s;
-  z-index: 2001;
+  z-index: 1000;
   margin: 0 auto;
 
   .goBack {
@@ -32,7 +32,7 @@
   }
 
   .modalContent {
-    background-color: #ff8000;
+    background-color: #1b2052;
     max-width: 500px;
     color: #ffffff;
     height: 500px;
@@ -40,32 +40,48 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    box-shadow: -1px 11px 39px 8px rgba(0, 0, 0, 0.54);
 
     .modalCon {
       text-align: center;
+
+
       h2 {
         font-family: Nunito, sans-serif;
         color: #ffffff;
         font-size: 24px;
       }
-      div{
+
+      div {
         color: #fff;
-        font-family: Poppins,sans-serif;
+        font-family: Poppins, sans-serif;
+        margin-top: 2%;
+
+        span {
+          color: #6ebeff;
+        }
       }
-      button{
+      a {
+        color: #ccc;
+        text-decoration: underline;
+      }
+      button {
         background-color: #337AB7;
         border: none;
         width: 140px;
-        font-family: Poppins,sans-serif;
+        font-family: Poppins, sans-serif;
         height: 37px;
         color: #ffffff;
         transition: all 400ms;
-        &:hover{
+
+        &:hover {
           background-color: #6ebeff;
           color: #000000;
           cursor: pointer;
         }
       }
+
       .goBack {
         cursor: pointer;
         display: flex;

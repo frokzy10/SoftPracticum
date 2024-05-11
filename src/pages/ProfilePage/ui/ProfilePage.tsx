@@ -8,6 +8,10 @@ import UserService from "../../../entities/Form/services/UserService";
 import {IUser} from "../../../entities/Form";
 import {IoMdArrowBack} from "react-icons/io";
 import {useNavigate} from "react-router-dom";
+import {MdEmail} from "react-icons/md";
+import {HiStatusOnline} from "react-icons/hi";
+import {FaCoins} from "react-icons/fa6";
+import {TbMilitaryRank} from "react-icons/tb";
 
 const ProfilePage: FC = () => {
     const {store} = useContext(STORECONTEXT);
@@ -53,12 +57,22 @@ const ProfilePage: FC = () => {
                             <img className={cls.profileLogo} src="https://avatars.githubusercontent.com/u/110032093?v=4"
                                  alt="img"/>
                             <div className={cls.headerRightSide}>
-                                <h2 className={cls.profileEmail}>{store.isAuth ? `Почта: ${store.user.email}` : 'Почта: Авторизуйтесь'}</h2>
-                                <h2 className={cls.profileStatus}>{store.user.isActivated ? 'Статус: Аккаунт подтвержен' : "Статус: Подтвердите аккаунт"}</h2>
-                                <div
-                                    className={cls.profileStatus}>Статус: {!store.user.status ? "Никто" : store.user.status}</div>
-                                <div
-                                    className={cls.profilePoints}>Очки: {!store.user.points ? "0" : store.user.points}  </div>
+                                <div className={cls.emailCon}>
+                                    <MdEmail/>
+                                    <h2 className={cls.profileEmail}>{store.isAuth ? `Почта: ${store.user.email}` : 'Почта: Авторизуйтесь'}</h2>
+                                </div>
+                                <div className={cls.profileStatusCon}>
+                                    <HiStatusOnline/>
+                                    <h2 className={cls.profileStatus}>{store.user.isActivated ? 'Статус: Аккаунт подтвержен' : "Статус: Подтвердите аккаунт"}</h2>
+                                </div>
+                                <div className={cls.profileRankCon}>
+                                    <TbMilitaryRank/>
+                                    <div className={cls.profileRank}>Звание: {!store.user.status ? "Никто" : store.user.status}</div>
+                                </div>
+                                <div className={cls.profileCoinCon}>
+                                    <FaCoins/>
+                                    <div className={cls.profilePoints}>Кодкоинов: {!store.user.points ? "0" : store.user.points}  </div>
+                                </div>
                             </div>
                         </div>
                         <div className={cls.profileBtnContainer}>

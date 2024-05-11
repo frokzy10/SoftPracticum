@@ -71,6 +71,7 @@ const LevelPage: FC = () => {
                     <><Spinner/></>
                 ) : game ? (
                     <div className={cls.levelHeader}>
+                        {/* eslint-disable-next-line jsx-a11y/iframe-has-title */}
                         <iframe width="760" height="415"
                                 src={game.conditionVideo}
                                 referrerPolicy="strict-origin-when-cross-origin"

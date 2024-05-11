@@ -1,25 +1,28 @@
-.profileAll{
+.profileAll {
   background-color: #020b18;
   width: 100%;
   height: 80vh;
-  .goBack{
+
+  .goBack {
     display: flex;
     align-items: center;
     color: #dddddd;
     margin-left: 2%;
     font-size: 17px;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 400;
     transition: all 400ms;
-    &:hover{
+
+    &:hover {
       opacity: 0.9;
       cursor: pointer;
     }
   }
+
   .profileContainer {
     max-width: 1400px;
     display: grid;
-    margin: 0 auto;
+    margin: 15px auto;
     padding: 0 2%;
 
     .profileBtnContainer {
@@ -32,11 +35,12 @@
         justify-content: center;
         align-items: center;
         height: 40px;
-        background-color:#ffb700;
+        background-color: #ffb700;
         border: none;
-        font-family: Poppins,sans-serif;
+        font-family: Poppins, sans-serif;
         transition: all 400ms;
-        &:hover{
+
+        &:hover {
           background-color: #ff8000;
           cursor: pointer;
         }
@@ -58,44 +62,98 @@
         display: flex;
         flex-direction: column;
 
-        .profileEmail {
-          color: #ffffff;
-          font-family: "Open sans", sans-serif;
+        .emailCon {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .profileEmail {
+            color: #ffffff;
+            font-family: "Open sans", sans-serif;
+          }
+
+          svg {
+            color: #ffffff;
+            font-size: 22px;
+          }
         }
-        .profilePoints{
-          color: #ffffff;
-          font-family: Nunito,sans-serif;
-          font-weight: 600;
-          text-align: end;
-        }
-        .profileStatus {
+
+        .profilePoints {
           color: #ffffff;
           font-family: Nunito, sans-serif;
+          font-weight: 600;
+        }
+        .profileCoinCon{
+          display: flex;
+          align-items: center;
+          gap:10px;
+          margin-top: 1.5%;
+          svg{
+            color: #ffffff;
+            font-size: 22px;
+          }
+        }
+
+
+        .profileStatusCon {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          svg {
+            color: #ffffff;
+            font-size: 24px;
+          }
+
+          .profileStatus {
+            color: #ffffff;
+            font-family: Nunito, sans-serif;
+          }
+        }
+
+        .profileRankCon{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          svg{
+            color: #ffffff;
+            font-size: 24px;
+          }
+          .profileRank{
+            color: #ffffff;
+            font-size: 17px;
+            font-family: Nunito,sans-serif;
+
+          }
         }
       }
     }
   }
-  .getUsersBtn{
+
+  .getUsersBtn {
     width: 120px;
     height: 37px;
     background-color: #ff8000;
     border: none;
-    font-family: "Open sans",sans-serif;
+    font-family: "Open sans", sans-serif;
     margin: 10% auto 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 400ms;
-    &:hover{
+
+    &:hover {
       background-color: #ffb700;
       cursor: pointer;
     }
   }
-  .getUser{
+
+  .getUser {
     margin-top: 2%;
-    div{
+
+    div {
       color: #ffffff;
-      font-family: Nunito,sans-serif;
+      font-family: Nunito, sans-serif;
       font-weight: 400;
       text-align: center;
     }
